@@ -6,13 +6,23 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import { YourGoal } from '@/components/YourGoal'
+import { MakeLifeEasy } from '@/components/MakeLifeEasy'
+import { CaseStudyA } from '@/components/CaseStudyA'
+import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
+import { CaseStudyB } from '@/components/CaseStudyB'
+import { Testimonial } from '@/components/Testimonial'
+import { WeBrandLeaders } from '@/components/WeBrandLeaders'
+import { WeBrandLeaders2 } from '@/components/WeBrandLeaders2'
+import { WeBrandLeaders3 } from '@/components/WeBrandLeaders3'
+import portraitImage from '@/images/portrait.jpg'
 import {
   TwitterIcon,
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
-  TikTokIcon,
 } from '@/components/SocialIcons'
+
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -25,7 +35,6 @@ import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
-
 function MailIcon(props) {
   return (
     <svg
@@ -127,96 +136,13 @@ function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10 sm:text-sm"
         />
         <Button type="submit" className="flex-none ml-4">
           Join
         </Button>
       </div>
     </form>
-  )
-}
-
-function Resume() {
-  let resume = [
-    {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear(),
-      },
-    },
-    {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
-    },
-  ]
-
-  return (
-    <div className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="flex-none w-6 h-6" />
-        <span className="ml-3">Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
-            <div className="relative flex items-center justify-center flex-none w-10 h-10 mt-1 rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
-            </div>
-            <dl className="flex flex-wrap flex-auto gap-x-2">
-              <dt className="sr-only">Company</dt>
-              <dd className="flex-none w-full text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                {role.company}
-              </dd>
-              <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-                {role.title}
-              </dd>
-              <dt className="sr-only">Date</dt>
-              <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
-                <time dateTime={role.start.dateTime ?? role.start}>
-                  {role.start.label ?? role.start}
-                </time>{' '}
-                <span aria-hidden="true">—</span>{' '}
-                <time dateTime={role.end.dateTime ?? role.end}>
-                  {role.end.label ?? role.end}
-                </time>
-              </dd>
-            </dl>
-          </li>
-        ))}
-      </ol>
-      <Button href="#" variant="secondary" className="w-full mt-6 group">
-        Download CV
-        <ArrowDownIcon className="w-4 h-4 transition stroke-zinc-400 group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-    </div>
   )
 }
 
@@ -249,52 +175,68 @@ function Photos() {
 
 export default function Home({ articles }) {
   return (
-    <>
+    <div className="overflow-hidden">
       <Head>
-        <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
-        </title>
-        <meta
-          name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
-        />
+        <title>Djembe Media - Branding and Marketing Consultants</title>
+        <meta name="description" content="Branding and Marketing" />
       </Head>
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
-          </p>
-          <div className="flex gap-6 mt-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TikTokIcon}
+      <Container className="relative z-10 ">
+        <div className="absolute left-0 -z-[1] h-full max-h-[850px] w-full bg-black opacity-[0.55]">
+          overlay
+        </div>
+        <div className=" grid grid-cols-1 gap-y-16 pt-36 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-16">
+          <video
+            id="background-video"
+            loop
+            autoPlay
+            muted
+            playsinline="true"
+            disablePictureInPicture="true"
+            className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
+          >
+            <source
+              src="/videos/compressed-Homepage-Banner-Video-1.mp4"
+              type="video/mp4"
+              className="max-h-full"
             />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+            Your browser does not support the video tag.
+          </video>
+
+          <div className=" lg:pl-24">
+            <div className=" m-auto max-w-md px-2.5 md:max-w-lg lg:m-0 lg:max-w-none">
+              <Image
+                src={portraitImage}
+                alt=""
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="object-cover glow-xl aspect-square rotate-3 rounded-2xl dark:bg-zinc-800"
+              />
+            </div>
+          </div>
+          <div className="p-4 lg:order-first lg:row-span-2">
+            <h1 className="text-4xl font-bold tracking-tightest text-zinc-800 dark:text-amber-300 sm:text-5xl lg:text-8xl">
+              Your expert partner in personal branding.
+            </h1>
+            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-100">
+              <p>
+                Djembe Media is a new kind of agency. We help corporate
+                executives and entrepreneurs harness the power of their personal
+                brands, increasing recognition and ROI.
+              </p>
+            </div>
           </div>
         </div>
       </Container>
+      <YourGoal />
+      <MakeLifeEasy />
+      <CaseStudyA />
+      <MakeLifeEasy2 />
+      <CaseStudyB />
+      <WeBrandLeaders />
+      <WeBrandLeaders2 />
+      <WeBrandLeaders3 />
+      <Testimonial />
       <Photos />
+      {/* 
       <Container className="mt-24 md:mt-28">
         <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
@@ -308,7 +250,8 @@ export default function Home({ articles }) {
           </div>
         </div>
       </Container>
-    </>
+      */}
+    </div>
   )
 }
 
