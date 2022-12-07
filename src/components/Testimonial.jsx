@@ -82,7 +82,7 @@ import { Prose } from '@/components/Prose'
                     <blockquote className="relative">
                       <div className="text-2xl font-medium leading-9 text-zinc-800 dark:text-zinc-200">
                         <p>
-                            Djembe Media can unlock your unique capabilities while maintaining your humility and authenticity. That’s a winning formula.
+                          These guys were great, highly recommend! We used them for a birthday party last month and everything about the company was 5 star service. They were on time, and very accommodating to our needs. My favorite part was being able to control the music ourselves. I will definitely use them again, and would recommend them to anyone else in need of a party bus.
                         </p>
                       </div>
                       <footer className="mt-8">
@@ -95,8 +95,8 @@ import { Prose } from '@/components/Prose'
                             />
                           </div>
                           <div className="ml-4 lg:ml-0">
-                            <div className="text-base font-medium text-zinc-600 dark:text-zinc-100">Antonia Hunter</div>
-                            <div className="text-base font-medium text-zinc-400">Chairman and CEO, McClatchy | Former CEO, Chicago Tribune</div>
+                            <div className="text-base font-medium text-zinc-600 dark:text-zinc-100">Natalya V.</div>
+                            <div className="text-base font-medium text-zinc-400">Fairfax, VA</div>
                           </div>
                         </div>
                       </footer>

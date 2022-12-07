@@ -13,9 +13,7 @@ import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
 import { CaseStudyB } from '@/components/CaseStudyB'
 import { Testimonial } from '@/components/Testimonial'
 import { WeBrandLeaders } from '@/components/WeBrandLeaders'
-import { WeBrandLeaders2 } from '@/components/WeBrandLeaders2'
-import { WeBrandLeaders3 } from '@/components/WeBrandLeaders3'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/Service-Area-Map-Official-e1552205109828.jpg'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -23,11 +21,11 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image1 from '@/images/photos/bachelor.jpg'
+import image2 from '@/images/photos/bachelorette.jpg'
+import image3 from '@/images/photos/concerts.jpg'
+import image4 from '@/images/photos/nightout.jpg'
+import image5 from '@/images/photos/weddings.jpg'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -227,7 +225,6 @@ export default function Home({ articles }) {
       <YourGoal />
       <MakeLifeEasy />
       <MakeLifeEasy2 />
-      <CaseStudyB />
       <WeBrandLeaders />
       <Testimonial />
       <Photos />

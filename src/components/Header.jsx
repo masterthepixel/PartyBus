@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-// import avatarImage from '@/images/djembe.png'
+import avatarImage from '@/images/probus_dark.svg'
 import { Fragment, useEffect, useRef } from 'react'
 
 function CloseIcon(props) {
@@ -164,9 +164,10 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex px-3 text-sm font-medium rounded-full shadow-lg bg-white/90 text-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
+        
         <NavItem href="/articles">Articles</NavItem>
         {/*
+        <NavItem href="/about">About</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/speaking">Speaking</NavItem>
         <NavItem href="/uses">Uses</NavItem>
@@ -222,7 +223,7 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'flex h-16 w-42 justify-center bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
+        'flex h-16 w-36 justify-center bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
       )}
       {...props}
     />
@@ -238,13 +239,13 @@ function Avatar({ large = false, className, ...props }) {
       {...props}
     >
       <Image
-        src="/images/djembe.png"
+        src={avatarImage}
         alt=""
-        width={1200}
-        height={719}
+        width={2590}
+        height={978}
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          '  bg-zinc-100 object-cover dark:bg-zinc-800',
+          '  bg-zinc-100 object-contain dark:bg-zinc-800',
           large ? 'w-auto' : 'h-10'
         )}
         priority
