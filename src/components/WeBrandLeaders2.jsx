@@ -4,12 +4,6 @@ import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
 
-import {
-    BoltIcon, ArrowTopRightOnSquareIcon,
-    ChatBubbleBottomCenterTextIcon,
-    EnvelopeIcon,
-    GlobeAltIcon,
-    ScaleIcon } from '@heroicons/react/24/outline'
 
     export function WeBrandLeaders2() {
         return (

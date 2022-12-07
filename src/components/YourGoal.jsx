@@ -6,13 +6,7 @@ import { Prose } from '@/components/Prose'
 import Image from 'next/image'
 // import portraitImage from '/images/avatar.jpg'
 
-import {
-  BoltIcon,
-  ChatBubbleBottomCenterTextIcon,
-  EnvelopeIcon,
-  GlobeAltIcon,
-  ScaleIcon,
-} from '@heroicons/react/24/outline'
+
 
 export function YourGoal() {
   return (
