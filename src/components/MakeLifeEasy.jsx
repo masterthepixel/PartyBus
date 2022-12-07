@@ -10,29 +10,30 @@ import {
   EnvelopeIcon,
   GlobeAltIcon,
   ScaleIcon,
+  HandThumbUpIcon
 } from '@heroicons/react/24/outline'
 
 const transferFeatures = [
   {
     id: 1,
-    name: 'Be Bold',
+    name: 'Sporting Events',
     description:
-      'The world needs more boldness. But boldness looks different on everyone. We celebrate getting out of your own comfort zone and taking risks, whatever that means for you.',
-    icon: GlobeAltIcon,
+      'Whether it is a professional sports team, a college team, or even a high school or junior high team that you are going to watch play with a large group of family members, there is no better way to get to the game than on a fully equipped party bus.',
+    icon: HandThumbUpIcon,
   },
   {
     id: 2,
-    name: 'Be True',
+    name: 'Bachelor & Bachelorette Parties',
     description:
-      'We own our authenticity and inspire others to do the same. We celebrate vulnerability and we celebrate our differences— these are what make us human.',
-    icon: ScaleIcon,
+      'That final night of freedom is not best spent driving around in a cramped car, and is much better suited to traveling in luxurious style with all your friends in a spacious party bus. There is no better choice for that wild night out on the town.',
+    icon: HandThumbUpIcon,
   },
   {
     id: 3,
-    name: 'Be Kind',
+    name: 'Weddings',
     description:
-      'Being kind is different than being nice. Being kind starts with your soul. It means leading with your heart and genuinely hoping for the best for others.',
-    icon: BoltIcon,
+      'After that incredible bachelor or bachelorette party, you`ll certainly want to take advantage of our services again for your wedding. After all, there is no more stylish and contemporary mode of transportation to get you to and from all your wedding destinations, from the church or wedding venue to the reception and perhaps even to the honeymoon destination if it happens to be within driving distance! We have special wedding packages available for you, so be sure to ask about them when you call.',
+    icon: HandThumbUpIcon,
   },
 ]
 const communicationFeatures = [
@@ -99,27 +100,19 @@ export function MakeLifeEasy() {
           </svg>
 
           <div className="relative">
-            <h2 className="... mx-auto  max-w-2xl text-left  text-6xl font-bold tracking-tight text-zinc-800 dark:text-amber-300 sm:text-7xl lg:text-center lg:text-8xl">
-              Create impact.
+            <h2 className="... mx-auto  max-w-2xl py-8">
+              Welcome to Pro-Bus
             </h2>
-            <h3 className="max-w-3xl mx-auto mt-6 text-2xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-3xl lg:text-center lg:text-4xl">
-              Create lasting impact and drive ROI with strong personal branding.
-            </h3>
+
           </div>
 
           <div className="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative">
-              <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-amber-200 sm:text-3xl">
-                Create lasting impact and drive ROI with strong personal
-                branding.
+              <h3 className="text-2xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-3xl">
+                For the best luxury transportation provider in the DMV, you&rsquo;ve come to the right place.
               </h3>
               <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
-                Over the years, we’ve learned a thing or two about personal
-                branding. And the real truth of the matter is, having a strong
-                corporate brand is no longer enough. Your organization is made
-                up of countless employees who also represent your business. You
-                can leave it to them to do this successfully, or you can give
-                them a helping hand.
+              Our party bus offers the most convenient and stylish way of transportation. Don&rsquo;t let bad traffic, fighting for parking spaces, or the quest of finding someone to be your designated driver ruin your day or night out. With a one of luxury vehicles you and your guests are guaranteed to enjoy all that the city has to offer in the most luxurious way possible. Let our team show you around the hottest spots in the area - no matter the event, itinerary or schedule, we&rsquo;re able to accommodate it.
               </p>
 
               <dl className="mt-10 space-y-10">

@@ -10,32 +10,33 @@ import {
   EnvelopeIcon,
   GlobeAltIcon,
   ScaleIcon,
+  HandThumbUpIcon
 } from '@heroicons/react/24/outline'
 
-const transferFeatures = [
+const communicationFeatures = [
   {
     id: 1,
-    name: 'Be in Service',
+    name: 'Concerts',
     description:
-      'We own our authenticity and inspire others to do the same. We celebrate vulnerability and we celebrate our differences— these are what make us human.',
-    icon: ChatBubbleBottomCenterTextIcon,
+      'When you are going to see that exciting music act that you have been dying to see, whether it is at an arena or at a smaller venue, it is always fun to gather a bunch of your friends together and rent a party bus to take you to the concert and back. You can keep the concert going all the way home too!',
+    icon: HandThumbUpIcon,
   },
   {
     id: 2,
-    name: 'Be Relevant',
+    name: 'Wine Tours',
     description:
-      'The world is changing fast. We keep a pulse on our industry and communities with insatiable curiosity and let the knowledge we gain inform our work.',
-    icon: EnvelopeIcon,
+      'During the day you can dine outdoors among the vines with a picnic lunch at a scenic winery, or delight yourself at one of the many renowned and unique Virginia restaurants. Most of our wine tours take between five and seven hours, depending on the region and your dining choices. Call now to ask about our rental packages, special rates, and selecting the right vehicle to rent for your party.',
+    icon: HandThumbUpIcon,
   },
   {
     id: 3,
-    name: 'Be Extraordinary',
+    name: 'Club & Bar Hopping',
     description:
-      'Show up every day as your highest self. Build equity in yourself. Build equity in your future. It starts with you and it starts now.',
-    icon: EnvelopeIcon,
+      'The DMV is known for some of the hottest night clubs in the world. We want to make your night as enjoyable and thrilling as possible. We can make it a night that you will never forget, but one that you do not have to remember! Our team wants you to have the night of your life without having to worry about electing a designated driver. ',
+    icon: HandThumbUpIcon,
   },
 ]
-const communicationFeatures = [
+const transferFeatures = [
   {
     id: 1,
     name: 'Be In Service',
@@ -66,11 +67,8 @@ export function MakeLifeEasy2() {
         <div className="relative max-w-xl lg:max-w-7xl">
           <div className="relative">
             <h2 className="max-w-2xl mx-auto text-6xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-300 sm:text-7xl lg:text-center lg:text-8xl">
-              Everything is brand.
+              Enjoy the ride with Pro-Bus
             </h2>
-            <h3 className="max-w-3xl mx-auto mt-6 text-2xl font-bold tracking-tight text-zinc-800 dark:text-amber-200 sm:text-3xl lg:text-center lg:text-4xl">
-              Create lasting impact and drive ROI with strong personal branding.
-            </h3>
           </div>
 
           <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
@@ -147,17 +145,11 @@ export function MakeLifeEasy2() {
           <div className="relative ">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
               <div className="lg:col-start-2">
-                <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-amber-200 sm:text-3xl">
-                  Define your personal branding strategy with Djembe Mediato
-                  create maximum impact.{' '}
+                <h3 className="text-2xl font-bold text-left">
+                  Travel and party in style, we will take you where you want to go{' '}
                 </h3>
                 <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
-                  Djembe Mediateaches people how to leverage the most essential
-                  asset in the world today: an authentic personal brand. Our
-                  work together will give you the clarity and foundation you
-                  need in order to identify your voice, scale your platform,
-                  attract more opportunities and become known as a true thought
-                  leading brand.
+                With high quality amenities, exceptional customer service, and a commitment to safety, you can rest easier knowing your transportation is completely taken care of.
                 </p>
 
                 <dl className="mt-10 space-y-10">
@@ -216,27 +208,25 @@ export function MakeLifeEasy2() {
                 <div className="py-16 lg:py-24">
                   <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="relative px-8 py-24 overflow-hidden bg-blue-500 glow-sm rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
-                      <div className="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
+                      <div className="absolute inset-0 opacity-90 mix-blend-multiply saturate-50 filter">
                         <img
-                          src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"
+                          src="https://images.unsplash.com/photo-1583318432730-a19c89692612?ixlib=rb-4.2.1&auto=format&fit=crop&w=1216&q=80"
                           alt=""
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="relative lg:col-span-1">
+                      <div className="relative lg:col-span-2">
                         {/* 
                             <img className="w-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-white.svg" alt="" />
                             */}
-                        <blockquote className="mt-6 text-white">
-                          <p className="text-xl font-medium sm:text-2xl">
-                            Djembe Media has an extraordinary ability to define,
-                            deliver and enhance the personal brand of any
-                            leader/executive.”
+                        <blockquote className="text-white ">
+                          <p className="text-base font-medium ">
+                          As a mom having to coordinate a party bus to transport teenagers to and from their dance, it caused some anxiety. Pro-Bus helped to ease my anxiety by explaining their typical homecoming pick up and drop off. I was impressed with their quick response, promptness for pick up and drop off. The driver was courteous and helpful teaching the teens the Bluetooth music setup. They were all in good hands.”
                           </p>
                           <footer className="mt-6">
                             <p className="flex flex-col font-medium">
                               <span>Erin Coupe</span>
-                              <span>Real Estate VP</span>
+                              <span>Rockville, MD</span>
                             </p>
                           </footer>
                         </blockquote>

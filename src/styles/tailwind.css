@@ -9,12 +9,12 @@
 
 h1,
 h2 {
-  @apply font-body tracking-tighter font-[600] !important;
+  @apply font-body tracking-tighter font-[600] text-5xl text-zinc-800 dark:text-amber-300 sm:text-6xl lg:text-center lg:text-7xl !important; 
 }
 
 p,h3 { @apply font-body}
 
-h3 {@apply font-[400]}
+h3 {@apply font-[400] text-2xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-3xl lg:text-center lg:text-4xl}
 
 .glow-xl {
   box-shadow: inset 0 0 50px #ffffff80, inset 20px 0 80px #ff00ff80,

@@ -216,11 +216,9 @@ export default function Home({ articles }) {
             <h1 className="text-4xl font-bold tracking-tightest text-zinc-800 dark:text-amber-300 sm:text-5xl lg:text-8xl">
               The Pro&#39;s Expereience
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-100">
+            <div className="mt-6 text-lg lg:text-xl space-y-7 text-zinc-600 dark:text-zinc-100">
               <p>
-                Djembe Media is a new kind of agency. We help corporate
-                executives and entrepreneurs harness the power of their personal
-                brands, increasing recognition and ROI.
+              Transportation that doubles as entertainment, whether it's tonight or for an event far in advance, book with us today.
               </p>
             </div>
           </div>
@@ -228,7 +226,6 @@ export default function Home({ articles }) {
       </Container>
       <YourGoal />
       <MakeLifeEasy />
-      <CaseStudyA />
       <MakeLifeEasy2 />
       <CaseStudyB />
       <WeBrandLeaders />
