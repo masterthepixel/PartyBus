@@ -4,48 +4,74 @@ import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
 
-
+const faqs = [
+  {
+    id: 1,
+    question: "If we are having a great time and would like to stay longer than we planned, can we do so without being charged exorbitant fees?",
+    answer:
+      "Absolutely! Not only do we want you to have an excellent time on your first trip with us, but we want you to remain a happy customer as the years go by! That's why we treat you with respect when it comes to our prices for service, and everything is out on the table. There are never any hidden fees to worry about. While there are certainly other party bus companies out there who would charge you additional fees for a lengthier term of service than originally contracted, we never will. We'll simply continue to charge you at the hourly rate that we agreed upon when you booked your trip. So you can relax and enjoy yourself without having to watch the clock or calendar!",
+  },
+  {
+    id: 2,
+    question: "Can my party smoke cigarettes on the bus? -or- Will the bus smell like cigarette smoke?",
+    answer:
+      "In order to keep our luxurious furnishings as clean and fresh an s possible, we have a firm no smoking policy on all of our vehicles. We appreciate your adhering to this policy out of respect for both your party and the parties who will rent the bus after you.",
+  },
+  {
+    id: 3,
+    question: "What about alcohol? Will it be provided, and/or are we allowed to bring our own?",
+    answer:
+      "Though we are not permitted by law to provide any alcohol to you, you are certainly allowed to bring your own on board, and we do provide all the necessary amenities to you, including coolers with ice, plastic cups, and a deluxe bar so your drink mixing and pouring will be easy and fun. This is one of the biggest advantages to renting a party bus, because even if you have a designated driver in your own vehicle, you cannot have open alcoholic beverages in the car. On our party buses, you're free to keep the party going in between destinations!",
+  },
+  {
+    id: 4,
+    question: "What hours of the day, days of the week, and times of the year do you operate?",
+    answer:
+      "We are at your service 24 hours a day, 365 days per year. Of course we do have times of the year that are busier than most, so booking well in advance is always a plus.",
+  },
+  {
+    id: 5,
+    question: "Do you serve the area that I plan to travel to?",
+    answer:
+      "Absolutely! Our details our most popular cities, but we do not limit our services to just those areas. You can gIve us a call right now at (240)-xxx-yyyy) to make sure that we service the area(s) that you plan to visit.",
+  },
+  {
+    id: 6,
+    question: "Am I allowed to cancel my reservation?",
+    answer:
+      "Unfortunately, you cannot cancel. Once you have made your reservation and paid a deposit, you will have to pay for the service if you use it or not. You cannot switched days either. The only thing you might be able to do, depending on availability, if move your time earlier/later or upgrade/downgrade your vehicle.",
+  },
+  {
+    id: 7,
+    question: "Am I allowed to cancel my reservation?",
+    answer:
+      "Children can most definitely come onto our vehicles. The only thing is, if there are those who are under 21 years of age, there cannot be alcohol on the vehicles.",
+  },
+  {
+    id: 8,
+    question: "Am I allowed to cancel my reservation?",
+    answer:
+      "Yes you can! There are coolers to even keep your food cold. Try not to make a mess, you may be charged a cleaning fee if the mess is a lot.",
+  },
+  // More questions...
+]
 
     export function WeBrandLeaders() {
         return (
           <Container className="mt-16 sm:mt-32">
-            <div className="relative ">
-              <div className="lg:absolute lg:inset-0">
-                <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2 glow-sm ">
-                  <img
-                    className="object-cover w-full h-56 lg:absolute lg:h-full rounded-xl"
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="relative px-4 pt-12 pb-16 sm:px-6 sm:pt-16 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-                <div className="lg:col-start-2 lg:pl-8">
-                  <div className="mx-auto text-base max-w-prose lg:ml-auto lg:mr-0 lg:max-w-lg">
-                    <h2 className="font-semibold leading-6 text-zinc-800 dark:text-amber-100">Work with us</h2>
-                    <h3 className="mt-2 text-5xl font-bold leading-8 tracking-tight text-zinc-800 dark:text-amber-300 sm:text-6xl lg:text-7xl">Welcome to your new leadership strategy </h3>
-                    <p className="mt-8 text-lg text-zinc-600 dark:text-zinc-100">
-                      Djembe Mediaworks with current and future leaders seeking to make an impact, drive real ROI and leave a legacy—no matter the industry. We teach people how to leverage their authentic selves through unique brand identity and personal branding strategy development to support their businesses.
-                    </p>
-                    <div className="mt-5 prose text-zinc-600 dark:text-zinc-100 prose-blue">
-                      <p>
-                        Entrepreneurs: business leaders and the faces of brands and businesses. We craft and amplify your message through bespoke personal branding strategy development. See our solutions for entrepreneurs.
-                      </p>
-                      
-                      <p>
-                        One that yields:
-                      </p>
-                      <ul role="list" className="dark:marker:text-white text-zinc-600 dark:text-zinc-100 marker:text-zinc-600">
-                        <li>More exposure.</li>
-                        <li>More audiences.</li>
-                        <li>More clients.</li>
-                        <li>More opportunities.</li>
-                        <li>More revenue.</li>
-                        <li>More authenticity.</li>
-                      </ul>
+            <div className="px-4 py-12 mx-auto divide-y divide-gray-200 max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900">Frequently Asked Questions</h2>
+              <div className="mt-8">
+                <dl className="divide-y divide-gray-200">
+                  {faqs.map((faq) => (
+                    <div key={faq.id} className="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8">
+                      <dt className="text-base font-medium text-zinc-600 dark:text-zinc-100 md:col-span-5">{faq.question}</dt>
+                      <dd className="mt-2 md:col-span-7 md:mt-0">
+                        <p className="text-base text-zinc-600 dark:text-zinc-100">{faq.answer}</p>
+                      </dd>
                     </div>
-                  </div>
-                </div>
+                  ))}
+                </dl>
               </div>
             </div>
           </Container>

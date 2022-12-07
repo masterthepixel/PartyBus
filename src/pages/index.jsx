@@ -229,8 +229,6 @@ export default function Home({ articles }) {
       <MakeLifeEasy2 />
       <CaseStudyB />
       <WeBrandLeaders />
-      <WeBrandLeaders2 />
-      <WeBrandLeaders3 />
       <Testimonial />
       <Photos />
       {/* 
