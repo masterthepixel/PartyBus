@@ -177,7 +177,7 @@ export default function Home({ articles }) {
   return (
     <div className="overflow-hidden">
       <Head>
-        <title>Djembe Media - Branding and Marketing Consultants</title>
+        <title></title>
         <meta name="description" content="Branding and Marketing" />
       </Head>
       <Container className="relative z-10 ">
@@ -214,7 +214,7 @@ export default function Home({ articles }) {
           </div>
           <div className="p-4 lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tightest text-zinc-800 dark:text-amber-300 sm:text-5xl lg:text-8xl">
-              Your expert partner in personal branding.
+              The Pro&#39;s Expereience
             </h1>
             <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-100">
               <p>

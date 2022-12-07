@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['"Playfair Display"'],
-      body: ['"Lato"'],
+      body: ['"Inter"'],
     },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
