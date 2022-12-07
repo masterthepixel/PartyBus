@@ -216,7 +216,7 @@ export default function Home({ articles }) {
             </h1>
             <div className="mt-6 text-lg lg:text-xl space-y-7 text-zinc-600 dark:text-zinc-100">
               <p>
-              Transportation that doubles as entertainment, whether it's tonight or for an event far in advance, book with us today.
+              Transportation that doubles as entertainment, whether it &apos;s tonight or for an event far in advance, book with us today.
               </p>
             </div>
           </div>
