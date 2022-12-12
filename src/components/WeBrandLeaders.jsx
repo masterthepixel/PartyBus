@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     id: 7,
-    question: "Am I allowed to cancel my reservation?",
+    question: "Can I bring children along with me?",
     answer:
       "Children can most definitely come onto our vehicles. The only thing is, if there are those who are under 21 years of age, there cannot be alcohol on the vehicles.",
   },
@@ -65,7 +65,7 @@ const faqs = [
                 <dl className="divide-y divide-gray-200">
                   {faqs.map((faq) => (
                     <div key={faq.id} className="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8">
-                      <dt className="pb-6 text-xl font-medium text-zinc-600 dark:text-zinc-100 md:col-span-5">{faq.question}</dt>
+                      <dt className="pb-6 text-xl font-medium text-zinc-600 dark:text-amber-200 md:col-span-5">{faq.question}</dt>
                       <dd className="mt-2 md:col-span-7 md:mt-0">
                         <p className="text-base text-zinc-600 dark:text-zinc-100">{faq.answer}</p>
                       </dd>

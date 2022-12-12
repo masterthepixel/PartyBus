@@ -13,7 +13,7 @@ import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
 import { CaseStudyB } from '@/components/CaseStudyB'
 import { Testimonial } from '@/components/Testimonial'
 import { WeBrandLeaders } from '@/components/WeBrandLeaders'
-import portraitImage from '@/images/Service-Area-Map-Official-e1552205109828.jpg'
+import portraitImage from '@/images/party-GW.png'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -206,7 +206,7 @@ export default function Home({ articles }) {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover glow-xl aspect-square rotate-3 rounded-2xl dark:bg-zinc-800"
+                className="object-cover backdrop-blur-sm rotate-3 rounded-2xl dark:bg-zinc-800"
               />
             </div>
           </div>
