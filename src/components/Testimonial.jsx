@@ -80,7 +80,7 @@ import { Prose } from '@/components/Prose'
                       />
                     </svg>
                     <blockquote className="relative">
-                      <div className="text-2xl font-medium leading-9 text-zinc-800 dark:text-zinc-200">
+                      <div className="text-lg font-medium leading-9 tracking-tighter text-zinc-800 dark:text-zinc-200">
                         <p>
                           These guys were great, highly recommend! We used them for a birthday party last month and everything about the company was 5 star service. They were on time, and very accommodating to our needs. My favorite part was being able to control the music ourselves. I will definitely use them again, and would recommend them to anyone else in need of a party bus.
                         </p>
@@ -95,8 +95,8 @@ import { Prose } from '@/components/Prose'
                             />
                           </div>
                           <div className="ml-4 lg:ml-0">
-                            <div className="text-base font-medium text-zinc-600 dark:text-zinc-100">Natalya V.</div>
-                            <div className="text-base font-medium text-zinc-400">Fairfax, VA</div>
+                            <div className="text-2xl font-medium text-zinc-900 dark:text-white">Natalya V.</div>
+                            <div className="text-base font-medium text-zinc-700 dark:text-gray-200">Fairfax, VA</div>
                           </div>
                         </div>
                       </footer>

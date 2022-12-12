@@ -122,7 +122,7 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 text-base divide-y divide-zinc-100 text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
+                <MobileNavItem href="/articles">Blog</MobileNavItem>
                 {/* <MobileNavItem href="/projects">Projects</MobileNavItem>
                 
                 <MobileNavItem href="/speaking">Speaking</MobileNavItem>
@@ -406,7 +406,7 @@ export function Header() {
           style={{ position: 'var(--header-position)' }}
         >
           <Container
-            className="top-[var(--header-top,theme(spacing.6))] w-full"
+            className="font-body top-[var(--header-top,theme(spacing.6))] w-full"
             style={{ position: 'var(--header-inner-position)' }}
           >
             <div className="relative flex gap-4">

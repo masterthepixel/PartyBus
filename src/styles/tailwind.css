@@ -7,14 +7,10 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
 
-h1,
-h2 {
-  @apply font-body tracking-tighter font-[600] text-5xl text-zinc-800 dark:text-amber-300 sm:text-6xl lg:text-center lg:text-7xl !important; 
-}
 
-p,h3 { @apply font-body}
+p,h1,h2,h4,h5,h6,h7,h3 { @apply font-body}
 
-h3 {@apply font-[400] text-2xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-3xl lg:text-center lg:text-4xl}
+.h3-text {@apply font-normal text-2xl tracking-tight text-left bg-gradient-to-b from-sky-600 to-blue-500 bg-clip-text text-transparent dark:text-amber-200 sm:text-3xl lg:text-center lg:text-4xl}
 
 .glow-xl {
   box-shadow: inset 0 0 50px #ffffff80, inset 20px 0 80px #ff00ff80,
@@ -28,6 +24,16 @@ h3 {@apply font-[400] text-2xl font-bold tracking-tight text-left text-zinc-800 
 
 .glow-sm {
   box-shadow: inset 0 0 10px #ffffff80, inset 5px 0 30px #ff00ff80,
+    inset -5px 0 30px #0ff, inset 5px 0 150px #ff00ff80, inset -5px 0 150px #0ff,
+    inset 7px 0 30px #ffffff66, inset -7px 0 20px #ffffff66,
+    inset 7px 0 50px #ffffff66, inset -7px 0 100px #ffffff66,
+    inset 7px 0 40px #f00, inset -7px 0 40px #ff0, inset 7px 0 100px #f00,
+    inset -7px 0 100px #ff0, 0 0 15px #ffffff66, -8px 0 20px #f00,
+    8px 0 20px #ff0;
+}
+
+.text-sm {
+  text-shadow: inset 0 0 10px #ffffff80, inset 5px 0 30px #ff00ff80,
     inset -5px 0 30px #0ff, inset 5px 0 150px #ff00ff80, inset -5px 0 150px #0ff,
     inset 7px 0 30px #ffffff66, inset -7px 0 20px #ffffff66,
     inset 7px 0 50px #ffffff66, inset -7px 0 100px #ffffff66,

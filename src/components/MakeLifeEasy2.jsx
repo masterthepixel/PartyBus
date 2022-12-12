@@ -62,11 +62,11 @@ const transferFeatures = [
 
 export function MakeLifeEasy2() {
   return (
-    <Container className="mt-16 sm:mt-32">
+    <Container className="mt-16 sm:mt-32 font-body">
       <div className="">
         <div className="relative max-w-xl lg:max-w-7xl">
           <div className="relative">
-            <h2 className="max-w-2xl mx-auto text-6xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-300 sm:text-7xl lg:text-center lg:text-8xl">
+            <h2 className="max-w-3xl mx-auto py-2 ... filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-sky-600 to-blue-500 bg-clip-text text-transparent dark:text-amber-300 text-5xl lg:text-center lg:text-6xl">
               Enjoy the ride with Pro-Bus
             </h2>
           </div>
@@ -145,7 +145,7 @@ export function MakeLifeEasy2() {
           <div className="relative ">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
               <div className="lg:col-start-2">
-                <h3 className="text-2xl font-bold text-left">
+                <h3 className="text-xl font-bold leading-snug tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-2xl">
                   Travel and party in style, we will take you where you want to go{' '}
                 </h3>
                 <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
@@ -159,11 +159,11 @@ export function MakeLifeEasy2() {
                         <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
                           <item.icon className="w-8 h-8" aria-hidden="true" />
                         </div>
-                        <p className="ml-16 text-lg font-medium leading-6 text-zinc-600 dark:text-amber-200">
+                        <p className="ml-16 text-lg font-bold leading-6 text-zinc-600 dark:text-amber-200">
                           {item.name}
                         </p>
                       </dt>
-                      <dd className="mt-2 ml-16 text-base text-zinc-600 dark:text-zinc-100">
+                      <dd className="mt-2 ml-16 text-base font-normal text-zinc-600 dark:text-zinc-100">
                         {item.description}
                       </dd>
                     </div>

@@ -62,9 +62,9 @@ const communicationFeatures = [
 
 export function MakeLifeEasy() {
   return (
-    <Container className="mt-16 sm:mt-32">
+    <Container className="mt-16 sm:mt-32 font-body">
       <div className="">
-        <div className="relative max-w-xl lg:max-w-7xl">
+        <div className="relative max-w-xl lg:max-w-7xl ">
           <svg
             className="absolute hidden transform -translate-x-1/2 left-full -translate-y-1/4 lg:block"
             width={404}
@@ -100,15 +100,15 @@ export function MakeLifeEasy() {
           </svg>
 
           <div className="relative">
-            <h2 className="... mx-auto  max-w-2xl py-8">
-              Welcome to Pro-Bus
+            <h2 className=" mx-auto  max-w-2xl py-8 lg:py-16 ... filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-sky-600 to-blue-500 bg-clip-text text-transparent dark:text-amber-300 text-5xl lg:text-center lg:text-6xl">
+              About Pro-Bus
             </h2>
 
           </div>
 
           <div className="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative">
-              <h3 className="text-2xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-3xl">
+              <h3 className="text-xl font-bold leading-snug tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-2xl">
                 For the best luxury transportation provider in the DMV, you&rsquo;ve come to the right place.
               </h3>
               <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
@@ -122,11 +122,11 @@ export function MakeLifeEasy() {
                       <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
                         <item.icon className="w-8 h-8 " aria-hidden="true" />
                       </div>
-                      <p className="ml-16 text-lg font-medium leading-6 text-zinc-600 dark:text-amber-200">
+                      <p className="ml-16 text-lg font-bold leading-6 text-zinc-600 dark:text-amber-200">
                         {item.name}
                       </p>
                     </dt>
-                    <dd className="mt-2 ml-16 text-base text-zinc-600 dark:text-zinc-100">
+                    <dd className="mt-2 ml-16 text-base font-normal text-zinc-600 dark:text-zinc-100">
                       {item.description}
                     </dd>
                   </div>

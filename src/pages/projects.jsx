@@ -62,7 +62,7 @@ export default function Projects() {
   return (
     <div className="overflow-hidden">
       <Head>
-        <title>Projects - Kobla Aklasu</title>
+        <title>Projects - Pro-Bus</title>
         <meta
           name="description"
           content="Things I’ve made trying to put my dent in the universe."
