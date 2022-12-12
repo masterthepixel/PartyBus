@@ -8,28 +8,19 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { YourGoal } from '@/components/YourGoal'
 import { MakeLifeEasy } from '@/components/MakeLifeEasy'
-import { CaseStudyA } from '@/components/CaseStudyA'
 import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
-import { CaseStudyB } from '@/components/CaseStudyB'
 import { Testimonial } from '@/components/Testimonial'
 import { WeBrandLeaders } from '@/components/WeBrandLeaders'
 import portraitImage from '@/images/party-GW.png'
-import {
-  TwitterIcon,
-  InstagramIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from '@/components/SocialIcons'
+
+
 
 import image1 from '@/images/photos/bachelor.jpg'
 import image2 from '@/images/photos/bachelorette.jpg'
 import image3 from '@/images/photos/concerts.jpg'
 import image4 from '@/images/photos/nightout.jpg'
 import image5 from '@/images/photos/weddings.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'

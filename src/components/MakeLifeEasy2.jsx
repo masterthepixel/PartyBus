@@ -3,6 +3,9 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
+import Image from 'next/image'
+import promImage from '@/images/prom-image.jpeg'
+
 
 import {
   BoltIcon,
@@ -113,11 +116,12 @@ export function MakeLifeEasy2() {
                   <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="relative px-8 py-24 overflow-hidden bg-blue-500 glow-sm rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
                       <div className="absolute inset-0 opacity-90 mix-blend-multiply saturate-50 filter">
-                        <img
-                          src="https://images.unsplash.com/photo-1583318432730-a19c89692612?ixlib=rb-4.2.1&auto=format&fit=crop&w=1216&q=80"
+                        <Image
+                          src={promImage}
                           alt=""
                           className="object-cover w-full h-full"
-                        />
+                          width="400"
+                          height="600"                        />
                       </div>
                       <div className="relative lg:col-span-2">
                         {/* 
