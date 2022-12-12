@@ -11,7 +11,7 @@ import { MakeLifeEasy } from '@/components/MakeLifeEasy'
 import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
 import { Testimonial } from '@/components/Testimonial'
 import { WeBrandLeaders } from '@/components/WeBrandLeaders'
-import portraitImage from '@/images/party-GW.png'
+import portraitImage from '@/images/party-gw.png'
 
 
 
