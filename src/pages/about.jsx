@@ -92,7 +92,7 @@ export default function About() {
             loop
             autoPlay
             muted
-            playsinline="true"
+            playsInline="true"
             disablePictureInPicture="true"
             className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
           >

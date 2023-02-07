@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/probus_dark.svg'
+import avatarImage from '@/images/logo.png'
 import { Fragment, useEffect, useRef } from 'react'
 
 function CloseIcon(props) {
@@ -245,8 +245,8 @@ function Avatar({ large = false, className, ...props }) {
         height={978}
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
-          '  bg-zinc-100 object-contain dark:bg-zinc-800',
-          large ? 'w-auto' : 'h-10'
+          '  object-contain ',
+          large ? 'w-auto' : 'h-24'
         )}
         priority
       />

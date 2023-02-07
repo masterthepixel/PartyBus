@@ -12,6 +12,8 @@ import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
 import { Testimonial } from '@/components/Testimonial'
 import { WeBrandLeaders } from '@/components/WeBrandLeaders'
 import portraitImage from '@/images/party-gw.png'
+import avatarImage from '@/images/logo.png'
+
 
 
 
@@ -179,7 +181,7 @@ export default function Home({ articles }) {
             loop
             autoPlay
             muted
-            playsinline="true"
+            playsInline="true"
             disablePictureInPicture="true"
             className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
           >
@@ -201,8 +203,14 @@ export default function Home({ articles }) {
               />
             </div>
           </div>
-          <div className="p-4 lg:order-first lg:row-span-2">
-            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-center lg:text-7xl -mt-12 md:mt-4">
+          <div className="lg:order-first lg:row-span-2">
+            <Image
+                src={avatarImage}
+                alt=""
+                sizes="(min-width: 256px) 6rem, 4rem"
+                className="object-cover backdrop-blur-sm rounded-2xl"
+              />
+            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-center lg:text-7xl -mt-24">
               Create Lasting Memories
             </h1>
             <div className="mt-2 lg:mt-6 lg:text-xl space-y-7 text-zinc-50 dark:text-zinc-100">
