@@ -207,13 +207,13 @@ export default function Home({ articles }) {
             <Image
                 src={avatarImage}
                 alt=""
-                className="object-cover w-64 p-4 rounded-2xl"
+                className="object-cover w-64 "
               />
-            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-center lg:text-7xl -mt-16">
+            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-7xl -mt-16">
               Create Lasting Memories
             </h1>
             <div className="mt-2 lg:mt-6 lg:text-xl space-y-7 text-zinc-50 dark:text-zinc-100">
-              <p className="text-base text-white md:text-lg lg:text-center lg:text-xl">
+              <p className="text-base text-white md:text-lg lg:text-xl">
               Transportation that doubles as entertainment, whether it &apos;s tonight or for an event far in advance, book with us today.
               </p>
             </div>
