@@ -39,19 +39,13 @@ const faqs = [
     id: 6,
     question: "Am I allowed to cancel my reservation?",
     answer:
-      "Unfortunately, you cannot cancel. Once you have made your reservation and paid a deposit, you will have to pay for the service if you use it or not. You cannot switched days either. The only thing you might be able to do, depending on availability, if move your time earlier/later or upgrade/downgrade your vehicle.",
+      "Unfortunately, you cannot cancel. Once you have made your reservation and paid a deposit, you will have to pay for the service if you use it or not. You cannot switched days either. The only thing you might be able to do, depending on availability, is move your time earlier/later date.",
   },
   {
     id: 7,
     question: "Can I bring children along with me?",
     answer:
       "Children can most definitely come onto our vehicles. The only thing is, if there are those who are under 21 years of age, there cannot be alcohol on the vehicles.",
-  },
-  {
-    id: 8,
-    question: "Am I allowed to cancel my reservation?",
-    answer:
-      "Yes you can! There are coolers to even keep your food cold. Try not to make a mess, you may be charged a cleaning fee if the mess is a lot.",
   },
   // More questions...
 ]
