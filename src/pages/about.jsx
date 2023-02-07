@@ -78,10 +78,10 @@ export default function About() {
   return (
     <div className="overflow-hidden">
       <Head>
-        <title>About - Djembe Media</title>
+        <title>About - ProBus</title>
         <meta
           name="description"
-          content="Harness the power of authentic personal branding.
+          content="Create lasting memories.
           "
         />
       </Head>
@@ -92,7 +92,7 @@ export default function About() {
             loop
             autoPlay
             muted
-            playsInline="true"
+            playsInline={true}
             disablePictureInPicture="true"
             className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
           >

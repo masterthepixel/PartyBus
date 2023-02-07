@@ -169,7 +169,7 @@ export default function Home({ articles }) {
     <div className="overflow-hidden">
       <Head>
         <title></title>
-        <meta name="description" content="Branding and Marketing" />
+        <meta name="description" content="Create lasting memories" />
       </Head>
       <Container className="relative z-10 ">
         <div className="absolute left-0 -z-[1] h-full max-h-[850px] w-full bg-black opacity-[0.55]">
@@ -181,7 +181,7 @@ export default function Home({ articles }) {
             loop
             autoPlay
             muted
-            playsInline="true"
+            playsInline={true}
             disablePictureInPicture="true"
             className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
           >
@@ -194,7 +194,7 @@ export default function Home({ articles }) {
           </video>
 
           <div className=" lg:pl-24">
-            <div className=" m-auto max-w-md px-2.5 md:max-w-lg lg:m-0 lg:max-w-none">
+            <div className=" m-auto max-w-md px-2.5 md:max-w-lg lg:m-0 lg:max-w-none ">
               <Image
                 src={portraitImage}
                 alt=""
