@@ -207,10 +207,9 @@ export default function Home({ articles }) {
             <Image
                 src={avatarImage}
                 alt=""
-                sizes="(min-width: 256px) 6rem, 4rem"
-                className="object-cover backdrop-blur-sm rounded-2xl"
+                className="object-cover w-64 p-4 rounded-2xl"
               />
-            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-center lg:text-7xl -mt-24">
+            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-center lg:text-7xl -mt-16">
               Create Lasting Memories
             </h1>
             <div className="mt-2 lg:mt-6 lg:text-xl space-y-7 text-zinc-50 dark:text-zinc-100">
