@@ -33,7 +33,7 @@ const faqs = [
     id: 5,
     question: "Do you serve the area that I plan to travel to?",
     answer:
-      "Absolutely! Our details our most popular cities, but we do not limit our services to just those areas. You can gIve us a call right now at (240)-xxx-yyyy) to make sure that we service the area(s) that you plan to visit.",
+      "Absolutely! Our details our most popular cities, but we do not limit our services to just those areas. You can gIve us a call right now at (301)-212-0268) to make sure that we service the area(s) that you plan to visit.",
   },
   {
     id: 6,

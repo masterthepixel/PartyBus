@@ -95,7 +95,7 @@ import { Prose } from '@/components/Prose'
                             />
                           </div>
                           <div className="ml-4 lg:ml-0">
-                            <div className="text-2xl font-medium text-zinc-900 dark:text-white">Natalya V.</div>
+                            <div className="text-2xl font-medium text-zinc-900 dark:text-white">Gianna V.</div>
                             <div className="text-base font-medium text-zinc-700 dark:text-gray-200">Fairfax, VA</div>
                           </div>
                         </div>
