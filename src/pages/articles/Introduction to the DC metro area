@@ -1,16 +1,3 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
-
-export const meta = {
-  author: 'ProBus Party Bus',
-  date: '2023-03-14',
-  title: 'Introduction to the DC metro area',
-  description:
-    'Introduction to the DC metro area',
-}
-
-export default (props) => <ArticleLayout meta={meta} {...props} />
-
-
 ## Introduction to the DC metro area
 
 # The DC metro area: A Vibrant and Dynamic Region
