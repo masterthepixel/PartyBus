@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
@@ -56,11 +57,14 @@ export function AboutHeroFeatures() {
                 </div>
                 <div className="mt-12 sm:mt-16 lg:mt-0">
                     <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                    <img
+                    <Image
                         className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                         src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
                         alt="Inbox user interface"
+                        width={1920}
+                        height={1080}
                     />
+
                     </div>
                 </div>
                 </div>
@@ -98,11 +102,14 @@ export function AboutHeroFeatures() {
                 </div>
                 <div className="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
                     <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                    <img
+                    <Image
                         className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                         src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
                         alt="Customer profile user interface"
+                        width={1920}
+                        height={1080}
                     />
+
                     </div>
                 </div>
                 </div>

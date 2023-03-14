@@ -3,6 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
+import Image from 'next/image'
 
 import {
   BoltIcon,
@@ -217,18 +218,22 @@ export function CaseStudyA() {
                   <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="relative px-8 py-24 overflow-hidden bg-blue-500 shadow-2xl rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
                       <div className="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
-                        <img
-                          src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"
-                          alt=""
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <div className="relative lg:col-span-1">
-                        <img
+                        <Image
                           className="w-auto h-12"
                           src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
                           alt=""
+                          width={200}
+                          height={50}
                         />
+                      </div>
+                      <div className="relative lg:col-span-1">
+                        <Image
+                            className="w-auto h-12"
+                            src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
+                            alt=""
+                            width={200}
+                            height={50}
+                          />
                         <blockquote className="mt-6 text-white">
                           <p className="text-xl font-medium sm:text-2xl">
                             This app has completely transformed how we interact

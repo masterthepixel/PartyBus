@@ -3,6 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
+import Image from 'next/image'
 
 
     export function WeBrandLeaders2() {
@@ -74,10 +75,12 @@ import { Prose } from '@/components/Prose'
                         </svg>
                         <blockquote className="relative bg-white rounded-lg shadow-lg">
                         <div className="px-6 py-8 rounded-t-lg sm:px-10 sm:pt-10 sm:pb-8">
-                            <img
-                            src="https://tailwindui.com/img/logos/workcation-logo-blue-600-mark-gray-800-and-blue-600-text.svg"
-                            alt="Workcation"
-                            className="h-8"
+                            <Image
+                                src="https://tailwindui.com/img/logos/workcation-logo-blue-600-mark-gray-800-and-blue-600-text.svg"
+                                alt="Workcation"
+                                className="h-8"
+                                width={280}
+                                height={64}
                             />
                             <div className="relative mt-8 text-lg font-medium text-zinc-700">
                             <svg
@@ -95,10 +98,12 @@ import { Prose } from '@/components/Prose'
                         </div>
                         <cite className="relative flex items-center px-6 py-5 not-italic bg-blue-600 rounded-b-lg sm:mt-10 sm:items-start sm:py-5 sm:pl-12 sm:pr-10">
                             <span className="relative border-2 border-white rounded-full sm:absolute sm:top-0 sm:-translate-y-1/2 sm:transform">
-                            <img
+                            <Image
                                 className="w-12 h-12 bg-blue-300 rounded-full sm:h-20 sm:w-20"
                                 src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2.5&w=160&h=160&q=80"
                                 alt=""
+                                width={80}
+                                height={80}
                             />
                             </span>
                             <span className="relative ml-4 font-semibold leading-6 text-blue-300 sm:ml-24 sm:pl-1">
