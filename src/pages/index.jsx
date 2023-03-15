@@ -14,9 +14,6 @@ import { WeBrandLeaders } from '@/components/WeBrandLeaders'
 import portraitImage from '@/images/party-gw.png'
 import avatarImage from '@/images/logo.png'
 
-
-
-
 import image1 from '@/images/photos/bachelor.jpg'
 import image2 from '@/images/photos/bachelorette.jpg'
 import image3 from '@/images/photos/concerts.jpg'
@@ -102,8 +99,8 @@ function Article({ article }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="p-1 -m-1 group" {...props}>
-      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -112,16 +109,16 @@ function Newsletter() {
   return (
     <form
       action="/thank-you"
-      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="flex-none w-6 h-6" />
+        <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
-      <div className="flex mt-6">
+      <div className="mt-6 flex">
         <input
           type="email"
           placeholder="Email address"
@@ -129,7 +126,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10 sm:text-sm"
         />
-        <Button type="submit" className="flex-none ml-4">
+        <Button type="submit" className="ml-4 flex-none">
           Join
         </Button>
       </div>
@@ -142,7 +139,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -155,7 +152,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         ))}
@@ -182,7 +179,7 @@ export default function Home({ articles }) {
             autoPlay
             muted
             playsInline={true}
-            disablePictureInPicture="true"
+            disablePictureInPicture={true}
             className="absolute top-0 left-0 -z-10 h-full max-h-[850px] w-full  object-cover"
           >
             <source
@@ -199,22 +196,19 @@ export default function Home({ articles }) {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover backdrop-blur-sm rotate-3 rounded-2xl dark:bg-zinc-800"
+                className="rotate-3 rounded-2xl object-cover backdrop-blur-sm dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <Image
-                src={avatarImage}
-                alt=""
-                className="object-cover w-64 "
-              />
-            <h1 className="filter drop-shadow-lg font-body tracking-tighter font-[600] bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text text-transparent dark:text-amber-300 text-5xl md:text-6xl lg:text-7xl -mt-16">
+            <Image src={avatarImage} alt="" className="w-64 object-cover " />
+            <h1 className="-mt-16 bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 md:text-6xl lg:text-7xl">
               Create Lasting Memories
             </h1>
-            <div className="mt-2 lg:mt-6 lg:text-xl space-y-7 text-zinc-50 dark:text-zinc-100">
+            <div className="mt-2 space-y-7 text-zinc-50 dark:text-zinc-100 lg:mt-6 lg:text-xl">
               <p className="text-base text-white md:text-lg lg:text-xl">
-              Transportation that doubles as entertainment, whether it &apos;s tonight or for an event far in advance, book with us today.
+                Transportation that doubles as entertainment, whether it &apos;s
+                tonight or for an event far in advance, book with us today.
               </p>
             </div>
           </div>
