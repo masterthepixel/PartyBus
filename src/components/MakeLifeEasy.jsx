@@ -5,7 +5,7 @@ import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
 import harborwheelImage from '@/images/harborwheel.png'
 import businteriorImage from '@/images/businterior.jpg'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 import {
   BoltIcon,

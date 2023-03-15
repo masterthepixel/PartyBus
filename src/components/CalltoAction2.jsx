@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export default function CalltoAction2() {
   return (

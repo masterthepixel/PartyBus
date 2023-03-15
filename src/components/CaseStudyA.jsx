@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import CaseStudyAPhoto from '../images/img-simplybe-beamsuntorycase@2x.png'
 
 import {
