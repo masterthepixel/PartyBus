@@ -20,8 +20,8 @@ import image3 from '@/images/photos/concerts.jpg'
 import image4 from '@/images/photos/nightout.jpg'
 import image5 from '@/images/photos/weddings.jpg'
 
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
+// import { generateRssFeed } from '@/lib/generateRssFeed'
+// import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 function MailIcon(props) {
   return (
@@ -240,15 +240,13 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   await generateRssFeed()
+  // }
 
   return {
     props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
+      articles: [],
     },
   }
 }

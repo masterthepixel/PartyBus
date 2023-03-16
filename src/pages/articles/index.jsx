@@ -4,6 +4,7 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import Link from 'next/link'
 
 function Article({ article }) {
   return (
@@ -35,6 +36,7 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+  const articlesToRender = JSON.parse(articles)
   return (
     <>
       <Head>
@@ -49,11 +51,25 @@ export default function ArticlesIndex({ articles }) {
         intro="Our party bus rental service provides luxurious transportation with music and lighting systems, plus safe and reliable pickup and drop-off services."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex max-w-3xl flex-col space-y-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
+          {articlesToRender.length
+            ? articlesToRender.map((article, index) => (
+                <div
+                  key={index}
+                  className="mb-16 flex max-w-3xl flex-col space-y-16"
+                  id={`${article?.category.replaceAll(' ', '-')}`}
+                >
+                  <Link
+                    href={`#${article?.category.replaceAll(' ', '-')}`}
+                    className="block font-body text-lg font-bold text-white"
+                  >
+                    # {article?.category}
+                  </Link>
+                  {article?.articles.map((article) => (
+                    <Article key={article.slug} article={article} />
+                  ))}
+                </div>
+              ))
+            : null}
         </div>
       </SimpleLayout>
     </>
@@ -61,9 +77,10 @@ export default function ArticlesIndex({ articles }) {
 }
 
 export async function getStaticProps() {
+  const articles = await getAllArticles()
   return {
     props: {
-      articles: (await getAllArticles()).map(({ component, ...meta }) => meta),
+      articles: JSON.stringify(articles),
     },
   }
 }

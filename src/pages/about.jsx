@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -28,7 +28,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -41,7 +41,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         ))}
@@ -54,9 +54,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="flex text-sm font-medium transition group text-zinc-800 hover:text-blue-500 dark:text-zinc-200 dark:hover:text-blue-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-blue-500 dark:text-zinc-200 dark:hover:text-blue-500"
       >
-        <Icon className="flex-none w-6 h-6 transition fill-zinc-500 group-hover:fill-blue-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-blue-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -109,19 +109,19 @@ export default function About() {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover glow-sm aspect-square rotate-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800"
+                className="glow-sm aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tightest text-zinc-800 dark:text-amber-300 sm:text-5xl ">
+            <h1 className="tracking-tightest text-4xl font-bold text-zinc-800 dark:text-amber-300 sm:text-5xl ">
               Harness the power of authentic personal branding.
             </h1>
-            <div className="mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400">
-              <p className="mt-2 text-2xl font-medium space-y-7 text-zinc-600 dark:text-zinc-100 sm:text-3xl">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+              <p className="mt-2 space-y-7 text-2xl font-medium text-zinc-600 dark:text-zinc-100 sm:text-3xl">
                 Does this sound familiar?
               </p>
-              <p className="text-xl font-medium space-y-7 text-zinc-600 dark:text-zinc-100">
+              <p className="space-y-7 text-xl font-medium text-zinc-600 dark:text-zinc-100">
                 You are a leader (or emerging leader) looking to articulate your
                 value and amplify your digital presence in service of your
                 vision and success of your company…
@@ -165,7 +165,7 @@ export default function About() {
               <SocialLink
                 href="mailto:spencer@planetaria.tech"
                 icon={MailIcon}
-                className="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-700/40"
+                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
               >
                 spencer@planetaria.tech
               </SocialLink>
