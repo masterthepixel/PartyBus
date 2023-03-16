@@ -5,14 +5,24 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Article({ article }) {
+  console.log(article)
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
-      <Card className="md:col-span-3">
+      <Card className=" md:col-span-3">
+        <Image
+          src={article.thumbnail}
+          alt={article.title}
+          width={720}
+          height={576}
+          className="z-10 mb-4 w-4/6 object-cover object-center"
+        />
         <Card.Title href={`/articles/${article.slug}`}>
           {article.title}
         </Card.Title>
+
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
@@ -21,6 +31,7 @@ function Article({ article }) {
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
+
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
@@ -55,7 +66,7 @@ export default function ArticlesIndex({ articles }) {
             ? articlesToRender.map((article, index) => (
                 <div
                   key={index}
-                  className="mb-16 flex max-w-3xl flex-col space-y-16"
+                  className="mb-16 flex flex-col space-y-16"
                   id={`${article?.category.replaceAll(' ', '-')}`}
                 >
                   <Link
