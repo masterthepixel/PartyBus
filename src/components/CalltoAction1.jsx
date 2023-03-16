@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { formatDate } from '@/lib/formatDate'
 import { Prose } from '@/components/Prose'
-import Image from "next/legacy/image"
+import Image from 'next/image'
 
 import {
   BoltIcon,
@@ -66,18 +66,18 @@ export function CaseStudyA() {
       <div className="overflow-hidden">
         <div className="relative max-w-xl lg:max-w-7xl">
           <div className="relative">
-            <h2 className="max-w-2xl mx-auto text-3xl font-bold tracking-tight text-left text-zinc-800 dark:text-amber-300 sm:text-5xl lg:text-center">
+            <h2 className="mx-auto max-w-2xl text-left text-3xl font-bold tracking-tight text-zinc-800 dark:text-amber-300 sm:text-5xl lg:text-center">
               Everything is brand.
             </h2>
-            <p className="max-w-3xl mx-auto mt-6 text-xl text-zinc-600 dark:text-zinc-100 lg:text-center">
+            <p className="mx-auto mt-6 max-w-3xl text-xl text-zinc-600 dark:text-zinc-100 lg:text-center">
               Create lasting impact and drive ROI with strong personal branding.
             </p>
           </div>
 
           <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
-            <div className="relative mt-10 -mx-4 lg:mt-0" aria-hidden="true">
+            <div className="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
               <svg
-                className="absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden"
+                className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
                 width={784}
                 height={404}
                 fill="none"
@@ -112,7 +112,7 @@ export function CaseStudyA() {
           </div>
 
           <svg
-            className="absolute hidden transform translate-x-1/2 translate-y-12 right-full lg:block"
+            className="absolute right-full hidden translate-x-1/2 translate-y-12 transform lg:block"
             width={404}
             height={784}
             fill="none"
@@ -165,8 +165,8 @@ export function CaseStudyA() {
                   {communicationFeatures.map((item) => (
                     <div key={item.id} className="relative">
                       <dt>
-                        <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
-                          <item.icon className="w-8 h-8" aria-hidden="true" />
+                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                          <item.icon className="h-8 w-8" aria-hidden="true" />
                         </div>
                         <p className="ml-16 text-lg font-medium leading-6 text-zinc-600 dark:text-amber-200">
                           {item.name}
@@ -180,9 +180,9 @@ export function CaseStudyA() {
                 </dl>
               </div>
 
-              <div className="relative mt-10 -mx-4 lg:col-start-1 lg:mt-0">
+              <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
                 <svg
-                  className="absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden"
+                  className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
                   width={784}
                   height={404}
                   fill="none"
@@ -215,11 +215,11 @@ export function CaseStudyA() {
                   />
                 </svg>
                 <div className="py-16 lg:py-24">
-                  <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="relative px-8 py-24 overflow-hidden bg-blue-500 shadow-2xl rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
+                  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="relative overflow-hidden rounded-xl bg-blue-500 px-8 py-24 shadow-2xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
                       <div className="absolute inset-0 opacity-50 mix-blend-multiply saturate-0 filter">
                         <Image
-                          className="w-auto h-12"
+                          className="h-12 w-auto"
                           src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
                           alt=""
                           width={200}
@@ -228,12 +228,12 @@ export function CaseStudyA() {
                       </div>
                       <div className="relative lg:col-span-1">
                         <Image
-                            className="w-auto h-12"
-                            src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
-                            alt=""
-                            width={200}
-                            height={50}
-                          />
+                          className="h-12 w-auto"
+                          src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
+                          alt=""
+                          width={200}
+                          height={50}
+                        />
                         <blockquote className="mt-6 text-white">
                           <p className="text-xl font-medium sm:text-2xl">
                             This app has completely transformed how we interact
