@@ -2,13 +2,14 @@ import Head from 'next/head'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { getAllArticles } from '@/lib/getAllArticles'
+
 function Article({ article }) {
-  console.log(article)
+  // console.log(article)
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className=" md:col-span-3">
@@ -46,8 +47,10 @@ function Article({ article }) {
   )
 }
 
-export default function ArticlesIndex({ articles }) {
+export default function ArticlesIndex({ articles, chapters }) {
   const articlesToRender = JSON.parse(articles)
+  // console.log(articlesToRender)
+  // console.log(JSON.parse(chapters))
   return (
     <>
       <Head>

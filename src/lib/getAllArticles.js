@@ -9,7 +9,7 @@ async function importArticle(articleFilename) {
     slug: articleFilename.replace(/(\/index)?\.mdx$/, ''),
     ...meta,
     component,
-  };
+  }
 }
 
 export async function getAllArticles() {
@@ -33,5 +33,10 @@ export async function getAllArticles() {
   // console.log('finalArticles', finalArticles)
 
   // return articles.sort((a, z) => new Date(z.date) - new Date(a.date))
-  return finalArticles
+
+  return finalArticles.sort(
+    (a, b) =>
+      Number(a.category.substr('Chapter'.length + 1, 1)) -
+      Number(b.category.substr('Chapter'.length + 1, 1))
+  )
 }
