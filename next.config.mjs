@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'probusdmv.s3.amazonaws.com',
+      },
     ],
   },
 }
