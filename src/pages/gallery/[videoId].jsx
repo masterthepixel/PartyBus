@@ -21,7 +21,6 @@ const SingleVideo = ({ content, absoluteUrl }) => {
 
   const route = useRouter()
   const url = absoluteUrl + route.asPath
-  console.log(url)
 
   return (
     <div className="overflow-hidden">
