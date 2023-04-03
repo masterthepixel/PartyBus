@@ -49,8 +49,6 @@ function Article({ article }) {
 
 export default function ArticlesIndex({ articles, chapters }) {
   const articlesToRender = JSON.parse(articles)
-  // console.log(articlesToRender)
-  // console.log(JSON.parse(chapters))
   return (
     <>
       <Head>
@@ -70,11 +68,11 @@ export default function ArticlesIndex({ articles, chapters }) {
                 <div
                   key={index}
                   className="mb-16 flex flex-col space-y-16"
-                  id={`${article?.category.replaceAll(' ', '-')}`}
+                  id={`${article?.category?.replaceAll(' ', '-')}`}
                 >
                   <Link
-                    href={`#${article?.category.replaceAll(' ', '-')}`}
-                    className="block font-body text-lg font-bold text-white"
+                    href={`#${article?.category?.replaceAll(' ', '-')}`}
+                    className="block font-body text-lg font-bold text-zinc-800 dark:text-zinc-100"
                   >
                     # {article?.category}
                   </Link>
@@ -92,6 +90,7 @@ export default function ArticlesIndex({ articles, chapters }) {
 
 export async function getStaticProps() {
   const articles = await getAllArticles()
+  // console.log(articles)
   return {
     props: {
       articles: JSON.stringify(articles),

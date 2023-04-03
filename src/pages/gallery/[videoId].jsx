@@ -120,8 +120,6 @@ export async function getServerSideProps(context) {
   const { videoId } = context.query
   const content = await getGalleryDataById(videoId)
   // console.log(content)
-
-  console.log(context.req.headers.host)
   const absoluteUrl = context.req.headers.host
   return {
     props: {

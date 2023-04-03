@@ -1,12 +1,28 @@
 import React from 'react'
-import axios from 'axios'
 import GridPhotos from '@/components/gallery/gridphotos'
 import Head from 'next/head'
 import { Container } from '@/components/Container'
+import useGalleryData from '@/hooks/useGalleryData'
 
-const Gallery = ({ galleryData }) => {
-  const photos = galleryData ? JSON.parse(galleryData) : []
-  // console.log(photos)
+const Gallery = () => {
+  const [pageNumber, setPageNumber] = React.useState(0)
+  const { data, hasMore, loading, error } = useGalleryData(pageNumber)
+
+  const observer = React.useRef()
+  const lastBookElementRef = React.useCallback(
+    (node) => {
+      if (loading) return
+      if (observer.current) observer.current.disconnect()
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && hasMore) {
+          setPageNumber((prevPageNumber) => prevPageNumber + 1)
+        }
+      })
+      if (node) observer.current.observe(node)
+    },
+    [loading, hasMore]
+  )
+
   return (
     <div className="overflow-hidden">
       <Head>
@@ -14,22 +30,14 @@ const Gallery = ({ galleryData }) => {
         <meta name="description" content="Create lasting memories" />
       </Head>
       <Container className="relative z-10 mt-16 sm:mt-32">
-        <GridPhotos photos={photos} />
+        {/* {loading ? (
+          <p>Loading</p>
+        ) : (
+        )} */}
+        <GridPhotos photos={data} ref={lastBookElementRef} />
       </Container>
     </div>
   )
 }
 
 export default Gallery
-
-import { getGalleryData } from '@/lib/galleryData'
-
-export async function getStaticProps() {
-  const galleryData = await getGalleryData()
-  const partialData = JSON.parse(galleryData).slice(0, 100)
-  return {
-    props: {
-      galleryData: JSON.stringify(partialData),
-    },
-  }
-}

@@ -9,7 +9,7 @@ const LazyImage = ({ url, alt }) => (
       effect="blur"
       height="inherit"
       width="inherit"
-      className="rounded-xl"
+      className="h-full w-full rounded-xl"
     />
   </div>
 )
