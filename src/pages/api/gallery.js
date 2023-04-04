@@ -11,12 +11,18 @@ import { NextApiRequest, NextApiResponse } from 'next'
  */
 
 export default async function getGalleryDataByPage(req, res) {
-  const { page } = req.query
+  const { page, q } = req.query
   const galleryData = await getGalleryData()
-  const gallery = galleryData ? JSON.parse(galleryData) : []
-  if (!page) {
-    res.status(200).json(gallery)
+  let gallery = galleryData ? JSON.parse(galleryData) : []
+
+  if (q) {
+    gallery = gallery.filter((item) => {
+      return item.Category.toLowerCase().includes(q.toLowerCase())
+    })
   }
-  const content = gallery.slice(page * 100, page * 100 + 100)
+  if (!page) {
+    return res.status(200).json(gallery)
+  }
+  const content = gallery.slice(page * 20, page * 20 + 20)
   res.status(200).json(content)
 }

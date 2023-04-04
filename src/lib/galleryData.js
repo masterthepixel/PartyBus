@@ -15,3 +15,11 @@ export const getGalleryDataById = async (id) => {
   const content = gallery.find((item) => item.id === id)
   return JSON.stringify(content)
 }
+
+export const getGalleryDataCategories = async () => {
+  const galleryData = await getGalleryData()
+  const gallery = galleryData ? JSON.parse(galleryData) : []
+  const categories = gallery.map((item) => item.Category)
+  const uniqueCategories = [...new Set(categories)]
+  return JSON.stringify(uniqueCategories)
+}

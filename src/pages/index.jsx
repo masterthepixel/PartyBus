@@ -23,6 +23,9 @@ import image5 from '@/images/photos/weddings.jpg'
 // import { generateRssFeed } from '@/lib/generateRssFeed'
 // import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import TagClouds from '@/components/common/TagCloud'
+import { getGalleryDataCategories } from '@/lib/galleryData'
+
 function MailIcon(props) {
   return (
     <svg
@@ -161,7 +164,10 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home({ articles, galleryCategories }) {
+  const categoriesToRender = galleryCategories
+    ? JSON.parse(galleryCategories)
+    : []
   return (
     <div className="overflow-hidden">
       <Head>
@@ -215,6 +221,7 @@ export default function Home({ articles }) {
         </div>
       </Container>
       <YourGoal />
+      <TagClouds data={categoriesToRender} />
       <MakeLifeEasy />
       <MakeLifeEasy2 />
       <WeBrandLeaders />
@@ -244,9 +251,12 @@ export async function getStaticProps() {
   //   await generateRssFeed()
   // }
 
+  const galleryCategories = await getGalleryDataCategories()
+
   return {
     props: {
       articles: [],
+      galleryCategories,
     },
   }
 }

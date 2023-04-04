@@ -3,10 +3,16 @@ import GridPhotos from '@/components/gallery/gridphotos'
 import Head from 'next/head'
 import { Container } from '@/components/Container'
 import useGalleryData from '@/hooks/useGalleryData'
+import { useRouter } from 'next/router'
 
 const Gallery = () => {
+  const router = useRouter()
+  const { q } = router.query
+  console.log('q', q)
   const [pageNumber, setPageNumber] = React.useState(0)
-  const { data, hasMore, loading, error } = useGalleryData(pageNumber)
+  const { data, hasMore, loading, error } = useGalleryData(pageNumber, q)
+
+  // console.log('data', data)
 
   const observer = React.useRef()
   const lastBookElementRef = React.useCallback(

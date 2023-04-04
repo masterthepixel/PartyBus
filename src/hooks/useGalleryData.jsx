@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-export default function useGalleryData(pageNumber) {
+export default function useGalleryData(pageNumber, query) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [data, setData] = useState([])
@@ -18,12 +18,11 @@ export default function useGalleryData(pageNumber) {
     axios({
       method: 'GET',
       url: '/api/gallery',
-      params: { page: pageNumber },
+      params: { page: pageNumber, q: query ? query : null },
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })
       .then((res) => {
-        console.log('res.data', res.data)
-        setData((prevData) => [...res.data, ...prevData])
+        setData((prevData) => [...prevData, ...res.data])
         setHasMore(res.data.length > 0)
         setLoading(false)
       })
