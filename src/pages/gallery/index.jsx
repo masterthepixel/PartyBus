@@ -35,7 +35,7 @@ const Gallery = () => {
         <title>Gallery - Pro-Bus</title>
         <meta name="description" content="Create lasting memories" />
       </Head>
-      <Container className="relative z-10 mt-16 sm:mt-32">
+      <Container className="relative mt-16 sm:mt-32">
         {/* {loading ? (
           <p>Loading</p>
         ) : (
