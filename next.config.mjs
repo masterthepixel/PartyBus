@@ -19,6 +19,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'probusdmv.s3.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'nextjsconf-pics.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
     ],
   },
 }

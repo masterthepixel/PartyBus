@@ -1,34 +1,33 @@
-import MasonryLayout from "./MasonryLayout";
-import glossaryData from "../data/glossaryData";
+import glossaryData from '../data/glossaryData'
 
 const MasonryLayout = ({ items }) => {
   const columns = useMedia(
     // Media queries
     [
-      "(min-width: 768px)",
-      "(min-width: 1024px)",
-      "(min-width: 1280px)",
-      "(min-width: 1536px)",
-      "(min-width: 1920px)",
+      '(min-width: 768px)',
+      '(min-width: 1024px)',
+      '(min-width: 1280px)',
+      '(min-width: 1536px)',
+      '(min-width: 1920px)',
     ],
     // Column counts (corresponds with the media queries above)
     [1, 2, 3, 4, 5],
     // Default column count
     1
-  );
+  )
 
-  const columnWrapper = {};
-  const result = [];
+  const columnWrapper = {}
+  const result = []
 
   // Create empty arrays for each column
   for (let i = 0; i < columns; i++) {
-    columnWrapper[`column${i}`] = [];
+    columnWrapper[`column${i}`] = []
   }
 
   // Split the items into their respective columns
   for (let i = 0; i < items.length; i++) {
-    const columnIndex = i % columns;
-    columnWrapper[`column${columnIndex}`].push(items[i]);
+    const columnIndex = i % columns
+    columnWrapper[`column${columnIndex}`].push(items[i])
   }
 
   // Merge the columns back into a single array
@@ -38,7 +37,7 @@ const MasonryLayout = ({ items }) => {
         {columnWrapper[`column${i}`].map((item, index) => (
           <div
             key={index}
-            className="h-64 mb-6 bg-center bg-cover sm:h-72 md:h-80 lg:h-96 xl:h-112"
+            className="xl:h-112 mb-6 h-64 bg-cover bg-center sm:h-72 md:h-80 lg:h-96"
             style={{ backgroundImage: `url(${item.image})` }}
           >
             <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -46,15 +45,17 @@ const MasonryLayout = ({ items }) => {
               <h3 className="mb-2 text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
                 {item.title}
               </h3>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">{item.content}</p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                {item.content}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    );
+    )
   }
 
-  return <div className="flex flex-wrap">{result}</div>;
-};
+  return <div className="flex flex-wrap">{result}</div>
+}
 
-export default MasonryLayout;
+export default MasonryLayout

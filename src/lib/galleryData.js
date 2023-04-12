@@ -3,7 +3,7 @@ import path from 'path'
 
 const jsonDirectory = path.join(process.cwd(), 'data')
 
-console.log('jsonDirectory', jsonDirectory)
+// console.log('jsonDirectory', jsonDirectory)
 
 export const getGalleryData = async () => {
   return fs.readFileSync(jsonDirectory + '/csvjson.json', 'utf-8')
