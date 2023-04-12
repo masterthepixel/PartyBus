@@ -148,7 +148,7 @@ function content() {
         `import { ArticleLayout } from '@/components/ArticleLayout'
 
 export const meta = {
-  author: 'Adam Wathan',
+  author: 'Kobla Aklasu',
   date: '2022-09-02',
   title: '${blog.title}',
   description: \`${blog.content.slice(blog.content.indexOf('#') + 1, 350)}\`,
