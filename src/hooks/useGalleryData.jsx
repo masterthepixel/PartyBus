@@ -31,7 +31,7 @@ export default function useGalleryData(pageNumber, query) {
         setError(true)
       })
     return () => cancel()
-  }, [pageNumber])
+  }, [pageNumber, query])
 
   return { loading, error, data, hasMore }
 }

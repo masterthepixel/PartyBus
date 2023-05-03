@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 const Gallery = () => {
   const router = useRouter()
   const { q } = router.query
-  console.log('q', q)
+  // console.log('q', q)
   const [pageNumber, setPageNumber] = React.useState(0)
   const { data, hasMore, loading, error } = useGalleryData(pageNumber, q)
 

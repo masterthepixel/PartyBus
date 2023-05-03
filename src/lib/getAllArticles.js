@@ -40,3 +40,12 @@ export async function getAllArticles() {
       Number(b.category.substr('Chapter'.length + 1, 1))
   )
 }
+
+export async function getArticlesCategories() {
+  const articles = await getAllArticles()
+  const categories = articles.map((article) => ({
+    value: article.category,
+    label: article.category.split(':')[1].trim(),
+  }))
+  return categories
+}
