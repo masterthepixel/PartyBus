@@ -48,7 +48,7 @@ export default function Example({ articles, categories }) {
       </Head>
       {/* Mobile filter dialog */}
 
-      <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-7xl px-4 sm:px-8 lg:px-12 font-body">
+      <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-7xl px-4 sm:px-8 lg:px-20 font-body">
         <div className="border-b border-gray-200 pb-10">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Experience all the amazing sights and attractions of DC, including
@@ -83,7 +83,7 @@ export default function Example({ articles, categories }) {
 export async function getStaticProps() {
   const articles = await getAllArticles()
   const categories = await getArticlesCategories()
-  console.log(categories)
+  // console.log(categories)
   return {
     props: {
       articles: JSON.stringify(articles),
