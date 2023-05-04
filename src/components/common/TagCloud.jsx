@@ -13,7 +13,7 @@ const colorOption = {
 
 const TagClouds = ({ data = [] }) => {
   const renderData = data.map((item) => ({
-    value: item,
+    value: item.value,
     count: genRendomSize(12, 35),
   }))
   return (
@@ -33,7 +33,7 @@ const TagClouds = ({ data = [] }) => {
 
 const customRenderer = (tag, size, color) => (
   <Link
-    href={`/gallery?q=${tag.value.toLowerCase()}`}
+    href={`/gallery?q=${tag.value.replaceAll('&', '%26').toLowerCase()}`}
     key={tag.value}
     style={{
       //   animation: 'blinker 3s linear infinite',

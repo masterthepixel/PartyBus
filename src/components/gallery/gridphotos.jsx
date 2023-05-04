@@ -10,7 +10,7 @@ const GridPhotos = React.forwardRef(function MyGridPhotos(
 ) {
   return (
     <>
-      <div className="columns-2 md:columns-3 lg:columns-4">
+      <div className="columns-2 md:columns-3">
         {photos && photos.length > 0
           ? photos.map((photo, index) => {
               if (photos.length === index + 1) {

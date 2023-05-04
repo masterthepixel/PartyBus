@@ -21,5 +21,11 @@ export const getGalleryDataCategories = async () => {
   const gallery = galleryData ? JSON.parse(galleryData) : []
   const categories = gallery.map((item) => item.Category)
   const uniqueCategories = [...new Set(categories)]
-  return JSON.stringify(uniqueCategories)
+  const uniqueCategoriesWithLabel = uniqueCategories.map((item) => {
+    return {
+      label: item,
+      value: item,
+    }
+  })
+  return JSON.stringify(uniqueCategoriesWithLabel)
 }

@@ -12,12 +12,14 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function getGalleryDataByPage(req, res) {
   const { page, q } = req.query
+  // console.log('q', q.toLowerCase().split(','))
   const galleryData = await getGalleryData()
   let gallery = galleryData ? JSON.parse(galleryData) : []
 
   if (q) {
     gallery = gallery.filter((item) => {
-      return item.Category.toLowerCase().includes(q.toLowerCase())
+      //  filter by mutilple categories using query string
+      return q.toLowerCase().split(',').includes(item.Category.toLowerCase())
     })
   }
   if (!page) {
