@@ -20,14 +20,18 @@ export default function Example({ articles, categories }) {
       return [...prev, value]
     })
   }
-  console.log(selectedFilters)
 
-  const filteredArticles = articlesToRender.filter((article) => {
-    if (selectedFilters.length === 0) {
-      return true
-    }
-    return selectedFilters.includes(article.category)
-  })
+  const [filteredArticles, setFilteredArticles] = useState(articlesToRender)
+  const handleApplyFilter = () => {
+    const newArticles = articlesToRender.filter((article) => {
+      if (selectedFilters.length === 0) {
+        return true
+      }
+      return selectedFilters.includes(article.category)
+    })
+    setFilteredArticles(newArticles)
+  }
+  // console.log(filteredArticles)
 
   const filters = [
     {
@@ -65,6 +69,7 @@ export default function Example({ articles, categories }) {
           <ArticlesPageAside
             filters={filters}
             handleFilterChange={handleFilterChange}
+            handleApplyFilter={handleApplyFilter}
           />
           {/* Product grid */}
           <div className="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3 relative">

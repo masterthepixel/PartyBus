@@ -3,7 +3,12 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { classNames } from '@/utils/index'
-const ArticlesPageAside = ({ filters, handleFilterChange }) => {
+import { Button } from '../Button'
+const ArticlesPageAside = ({
+  filters,
+  handleFilterChange,
+  handleApplyFilter,
+}) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   return (
     <>
@@ -161,6 +166,9 @@ const ArticlesPageAside = ({ filters, handleFilterChange }) => {
               </div>
             ))}
           </form>
+          <Button className="mt-4 w-full" onClick={handleApplyFilter}>
+            Apply Filter
+          </Button>
         </div>
       </aside>
     </>
