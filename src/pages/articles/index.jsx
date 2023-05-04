@@ -20,6 +20,7 @@ export default function Example({ articles, categories }) {
       return [...prev, value]
     })
   }
+  // console.log(selectedFilters)
 
   const [filteredArticles, setFilteredArticles] = useState(articlesToRender)
   const handleApplyFilter = () => {
@@ -70,6 +71,7 @@ export default function Example({ articles, categories }) {
             filters={filters}
             handleFilterChange={handleFilterChange}
             handleApplyFilter={handleApplyFilter}
+            selectedFilters={selectedFilters}
           />
           {/* Product grid */}
           <div className="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3 relative">

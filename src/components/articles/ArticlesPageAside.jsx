@@ -4,10 +4,17 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { classNames } from '@/utils/index'
 import { Button } from '../Button'
+
+const callAll =
+  (...fns) =>
+  (...args) =>
+    fns.forEach((fn) => fn?.(...args))
+
 const ArticlesPageAside = ({
   filters,
   handleFilterChange,
   handleApplyFilter,
+  selectedFilters,
 }) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   return (
@@ -90,7 +97,11 @@ const ArticlesPageAside = ({
                                   <input
                                     id={`${section.id}-${optionIdx}-mobile`}
                                     name={`${section.id}[]`}
+                                    onChange={handleFilterChange}
                                     defaultValue={option.value}
+                                    checked={selectedFilters.includes(
+                                      option.value
+                                    )}
                                     type="checkbox"
                                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                   />
@@ -109,6 +120,15 @@ const ArticlesPageAside = ({
                     </Disclosure>
                   ))}
                 </form>
+                <Button
+                  onClick={callAll(
+                    () => handleApplyFilter(),
+                    () => setMobileFiltersOpen(false)
+                  )}
+                  className="mx-4"
+                >
+                  Apply Filter
+                </Button>
               </Dialog.Panel>
             </Transition.Child>
           </div>
@@ -150,6 +170,7 @@ const ArticlesPageAside = ({
                           onChange={handleFilterChange}
                           name={`${section.id}[]`}
                           defaultValue={option.value}
+                          checked={selectedFilters.includes(option.value)}
                           type="checkbox"
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
