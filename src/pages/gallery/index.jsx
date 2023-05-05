@@ -1,4 +1,4 @@
-import React, { useDeferredValue, useState } from 'react'
+import React, { useDeferredValue, useEffect, useState } from 'react'
 import GridPhotos from '@/components/gallery/gridphotos'
 import Head from 'next/head'
 import { Container } from '@/components/Container'
@@ -11,26 +11,9 @@ const Gallery = ({ categories }) => {
   const categoriesToRender = JSON.parse(categories)
   const router = useRouter()
   const { q } = router.query
-  // console.log('q', q)
-  const [pageNumber, setPageNumber] = React.useState(0)
-  const { data, hasMore, loading, setData } = useGalleryData(null, q)
+  const { data, loading, setData } = useGalleryData(null, q)
   const deferredValue = useDeferredValue(data)
   // console.log('data', data)
-
-  const observer = React.useRef()
-  // const lastBookElementRef = React.useCallback(
-  //   (node) => {
-  //     if (loading) return
-  //     if (observer.current) observer.current.disconnect()
-  //     observer.current = new IntersectionObserver((entries) => {
-  //       if (entries[0].isIntersecting && hasMore) {
-  //         setPageNumber((prevPageNumber) => prevPageNumber + 1)
-  //       }
-  //     })
-  //     if (node) observer.current.observe(node)
-  //   },
-  //   [loading, hasMore]
-  // )
 
   const filters = [
     {
@@ -51,16 +34,7 @@ const Gallery = ({ categories }) => {
     })
   }
 
-  // console.log(selectedFilters)
-  const [filteredGallery, setFilteredGallery] = useState(data)
   const handleApplyFilter = () => {
-    // const newGallery = data.filter((article) => {
-    //   if (selectedFilters.length === 0) {
-    //     return true
-    //   }
-    //   return selectedFilters.includes(article.category)
-    // })
-    // setFilteredGallery(newGallery)
     setData([])
     router.push({
       pathname: '/gallery',
@@ -69,7 +43,6 @@ const Gallery = ({ categories }) => {
       },
     })
   }
-  // console.log(filteredGallery)
 
   return (
     <div className="overflow-hidden">
@@ -105,7 +78,7 @@ const Gallery = ({ categories }) => {
             <div className="overflow-y-auto max-h-[1000px] scrollbar-hide">
               {/* Your content */}
               {!loading ? (
-                <GridPhotos photos={deferredValue} ref={observer} />
+                <GridPhotos photos={deferredValue} />
               ) : (
                 <div className="flex justify-center items-center h-96">
                   <svg

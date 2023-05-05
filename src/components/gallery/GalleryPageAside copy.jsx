@@ -1,13 +1,14 @@
-import { Fragment, useState } from 'react'
+import { Fragment, memo, useState } from 'react'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
-import { classNames } from '@/utils/index'
+import { callAll, classNames } from '@/utils/index'
 import { Button } from '../Button'
 const GalleryPageAside = ({
   filters,
   handleFilterChange,
   handleApplyFilter,
+  selectedFilters,
 }) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   return (
@@ -90,7 +91,11 @@ const GalleryPageAside = ({
                                   <input
                                     id={`${section.id}-${optionIdx}-mobile`}
                                     name={`${section.id}[]`}
+                                    onChange={handleFilterChange}
                                     defaultValue={option.value}
+                                    checked={selectedFilters.includes(
+                                      option.value
+                                    )}
                                     type="checkbox"
                                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                   />
@@ -109,6 +114,15 @@ const GalleryPageAside = ({
                     </Disclosure>
                   ))}
                 </form>
+                <Button
+                  onClick={callAll(
+                    () => handleApplyFilter(),
+                    () => setMobileFiltersOpen(false)
+                  )}
+                  className="mx-4"
+                >
+                  Apply Filter
+                </Button>
               </Dialog.Panel>
             </Transition.Child>
           </div>
@@ -150,6 +164,7 @@ const GalleryPageAside = ({
                           onChange={handleFilterChange}
                           name={`${section.id}[]`}
                           defaultValue={option.value}
+                          checked={selectedFilters.includes(option.value)}
                           type="checkbox"
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
@@ -174,4 +189,4 @@ const GalleryPageAside = ({
     </>
   )
 }
-export default GalleryPageAside
+export default memo(GalleryPageAside)

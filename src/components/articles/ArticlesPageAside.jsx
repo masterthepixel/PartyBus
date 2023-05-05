@@ -2,13 +2,8 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
-import { classNames } from '@/utils/index'
+import { callAll, classNames } from '@/utils/index'
 import { Button } from '../Button'
-
-const callAll =
-  (...fns) =>
-  (...args) =>
-    fns.forEach((fn) => fn?.(...args))
 
 const ArticlesPageAside = ({
   filters,

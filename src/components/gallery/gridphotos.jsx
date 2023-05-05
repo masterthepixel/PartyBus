@@ -4,38 +4,24 @@ import PhotoItemsAction from './photoItemsAction'
 import Image from 'next/image'
 import LazyImage from '../lazyimage/index'
 
-const GridPhotos = forwardRef(function MyGridPhotos({ photos = [] }, ref) {
+const GridPhotos = function MyGridPhotos({ photos = [] }) {
   return (
     <>
       <div className="columns-2 md:columns-3">
         {photos && photos.length > 0
-          ? photos.map((photo, index) => {
-              if (photos.length === index + 1) {
-                return (
-                  <div
-                    className="group relative mb-4 break-inside-avoid-column"
-                    key={index}
-                    ref={ref}
-                  >
-                    <GalleryImage photo={photo} />
-                  </div>
-                )
-              } else {
-                return (
-                  <div
-                    className="group relative mb-4 break-inside-avoid-column"
-                    key={index}
-                  >
-                    <GalleryImage photo={photo} />
-                  </div>
-                )
-              }
-            })
+          ? photos.map((photo, index) => (
+              <div
+                className="group relative mb-4 break-inside-avoid-column"
+                key={index}
+              >
+                <GalleryImage photo={photo} />
+              </div>
+            ))
           : null}
       </div>
     </>
   )
-})
+}
 
 const GalleryImage = ({ photo }) => {
   return (
