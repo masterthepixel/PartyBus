@@ -1,13 +1,10 @@
-import React from 'react'
+import { forwardRef, memo } from 'react'
 import Link from 'next/link'
 import PhotoItemsAction from './photoItemsAction'
 import Image from 'next/image'
 import LazyImage from '../lazyimage/index'
 
-const GridPhotos = React.forwardRef(function MyGridPhotos(
-  { photos = [] },
-  ref
-) {
+const GridPhotos = forwardRef(function MyGridPhotos({ photos = [] }, ref) {
   return (
     <>
       <div className="columns-2 md:columns-3">
@@ -64,4 +61,4 @@ const GalleryImage = ({ photo }) => {
   )
 }
 
-export default GridPhotos
+export default memo(GridPhotos)

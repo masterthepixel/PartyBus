@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useDeferredValue, useState } from 'react'
 import GridPhotos from '@/components/gallery/gridphotos'
 import Head from 'next/head'
 import { Container } from '@/components/Container'
@@ -14,7 +14,7 @@ const Gallery = ({ categories }) => {
   // console.log('q', q)
   const [pageNumber, setPageNumber] = React.useState(0)
   const { data, hasMore, loading, setData } = useGalleryData(null, q)
-
+  const deferredValue = useDeferredValue(data)
   // console.log('data', data)
 
   const observer = React.useRef()
@@ -105,7 +105,7 @@ const Gallery = ({ categories }) => {
             <div className="overflow-y-auto max-h-[1000px] scrollbar-hide">
               {/* Your content */}
               {!loading ? (
-                <GridPhotos photos={data} ref={observer} />
+                <GridPhotos photos={deferredValue} ref={observer} />
               ) : (
                 <div className="flex justify-center items-center h-96">
                   <svg
