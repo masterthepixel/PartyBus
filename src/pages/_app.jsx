@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { FiArrowUp } from 'react-icons/fi'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -32,6 +33,12 @@ export default function App({ Component, pageProps, router }) {
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />
+        <a
+          href="#backtobody"
+          className="fixed bottom-5 right-10 bg-zinc-900 dark:bg-zinc-100 w-10 h-10 rounded-full flex justify-center items-center"
+        >
+          <FiArrowUp className="text-zinc-100 dark:text-zinc-900" />
+        </a>
       </div>
     </>
   )

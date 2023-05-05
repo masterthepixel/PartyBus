@@ -50,3 +50,9 @@ h3 {
     inset -7px 0 100px #ff0, 0 0 15px #ffffff66, -8px 0 20px #f00,
     8px 0 20px #ff0;
 }
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
