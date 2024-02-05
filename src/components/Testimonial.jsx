@@ -9,9 +9,9 @@ export function Testimonial() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="overflow-hidden ">
-        <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-12 sm:px-6 lg:px-8 lg:py-20">
+        <div className="relative px-4 pt-20 pb-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-20">
           <svg
-            className="absolute left-0 top-full -translate-y-24 translate-x-80 transform lg:hidden"
+            className="absolute left-0 transform -translate-y-24 top-full translate-x-80 lg:hidden"
             width={784}
             height={404}
             fill="none"
@@ -32,7 +32,7 @@ export function Testimonial() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-zinc-200"
+                  className="text-zinc-200 dark:text-amber-200"
                   fill="currentColor"
                 />
               </pattern>
@@ -45,7 +45,7 @@ export function Testimonial() {
           </svg>
 
           <svg
-            className="absolute right-full top-1/2 hidden translate-x-1/2 -translate-y-1/2 transform lg:block"
+            className="absolute hidden transform translate-x-1/2 -translate-y-1/2 right-full top-1/2 lg:block"
             width={404}
             height={784}
             fill="none"
@@ -66,7 +66,7 @@ export function Testimonial() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-zinc-200"
+                  className="text-zinc-200 dark:text-amber-200/60"
                   fill="currentColor"
                 />
               </pattern>
@@ -81,7 +81,7 @@ export function Testimonial() {
           <div className="relative lg:flex lg:items-center">
             <div className="hidden lg:block lg:flex-shrink-0">
               <Image
-                className="h-64 w-64 rounded-full xl:h-80 xl:w-80"
+                className="w-64 h-64 rounded-full xl:h-80 xl:w-80"
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
                 width={80}
@@ -91,7 +91,7 @@ export function Testimonial() {
 
             <div className="relative lg:ml-10">
               <svg
-                className="absolute top-0 left-0 h-36 w-36 -translate-x-8 -translate-y-24 transform text-amber-300 opacity-50 dark:opacity-30"
+                className="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 opacity-50 h-36 w-36 text-amber-300 dark:opacity-30"
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 144 144"
@@ -102,8 +102,8 @@ export function Testimonial() {
                   d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z"
                 />
               </svg>
-              <blockquote className="relative">
-                <div className="text-lg font-medium leading-9 tracking-tighter text-zinc-800 dark:text-zinc-200">
+              <blockquote className="relative rounded-2xl bg-zinc-100 backdrop-blur-xl">
+                <div className="text-lg font-medium leading-9 tracking-tighter text-zinc-800 dark:text-zinc-200 lg:text-2xl md:p-6 ">
                   <p>
                     These guys were great, highly recommend! We used them for a
                     birthday party last month and everything about the company
@@ -114,11 +114,11 @@ export function Testimonial() {
                     party bus.
                   </p>
                 </div>
-                <footer className="mt-8">
+                <footer className="p-8">
                   <div className="flex">
                     <div className="flex-shrink-0 lg:hidden">
                       <Image
-                        className="h-12 w-12 rounded-full"
+                        className="w-12 h-12 rounded-full"
                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                         width={256}
@@ -127,7 +127,7 @@ export function Testimonial() {
                         objectFit="cover"
                       />
                     </div>
-                    <div className="ml-4 lg:ml-0">
+                    <div className="ml-4 -mt-8 lg:ml-0">
                       <div className="text-2xl font-medium text-zinc-900 dark:text-white">
                         Gianna V.
                       </div>

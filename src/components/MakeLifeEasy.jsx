@@ -122,23 +122,23 @@ export function MakeLifeEasy() {
                 For the best luxury transportation provider in the DMV,
                 you&rsquo;ve come to the right place.
               </h3>
-              <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
+              <p className="mt-3 text-lg leading-tight text-zinc-600 dark:text-zinc-100">
               The DMV is a town with so many amazing activities and destinations. The one constant issue is traffic and parking.  It&rsquo;s taken some time for us to come up with a viable solution.  The bus pass concept. We wanted to offer an answer to a problem everyone had. We know you&rsquo;ve experienced riding  around, circling blocks  over and over looking for a parking space.  It takes the fun out of the night.  So imagine being able to show up with all your friends together and not have to worry about parking.  The ProBUS was created to combat these issues; as time went on we realized we really had a niche in the market place for this type of mobile party.               </p>
-              <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">We noticed our guest had more fun on the bus than some of the events we’ve been booked to take them to. We decided to throw our own themed events, such as karaoke and ladies night as well as our very  own block party. 
+              <p className="mt-3 text-base leading-tight text-zinc-600 dark:text-zinc-100">We noticed our guest had more fun on the bus than some of the events we’ve been booked to take them to. We decided to throw our own themed events, such as karaoke and ladies night as well as our very  own block party. 
 </p>
 
               <dl className="mt-10 space-y-10">
                 {transferFeatures.map((item) => (
-                  <div key={item.id} className="relative">
+                  <div key={item.id} className="relative ">
                     <dt>
                       <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
                         <item.icon className="w-8 h-8 " aria-hidden="true" />
                       </div>
-                      <p className="ml-16 text-lg font-bold leading-6 text-zinc-600 dark:text-amber-200">
+                      <p className="ml-16 text-lg font-bold leading-tight leading-6 text-zinc-600 dark:text-amber-200">
                         {item.name}
                       </p>
                     </dt>
-                    <dd className="mt-2 ml-16 text-base font-normal text-zinc-600 dark:text-zinc-100">
+                    <dd className="mt-2 ml-16 text-base font-normal leading-tight text-zinc-600 dark:text-zinc-100">
                       {item.description}
                     </dd>
                   </div>

@@ -21,6 +21,12 @@ import image3 from '@/images/photos/concerts.jpg'
 import image4 from '@/images/photos/nightout.jpg'
 import image5 from '@/images/photos/weddings.jpg'
 
+import image6 from '@/images/photos/image6.jpeg'
+import image7 from '@/images/photos/image7.jpeg'
+import image8 from '@/images/photos/image8.jpeg'
+import image9 from '@/images/photos/image9.jpeg'
+import image10 from '@/images/photos/image10.jpeg'
+
 // import { generateRssFeed } from '@/lib/generateRssFeed'
 // import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -144,6 +150,33 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
+        {[image6, image8, image9, image10, image7].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              rotations[imageIndex % rotations.length]
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 object-cover w-full h-full"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Photos2() {
+  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+
+  return (
+    <div className="mt-16 sm:mt-20">
+      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -229,7 +262,9 @@ export default function Home({ articles, galleryCategories }) {
 
       <MakeLifeEasy />
       <MakeLifeEasy2 />
+      <Photos2 />
       <Testimonial />
+
       {/* 
       <Container className="mt-24 md:mt-28">
         <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">

@@ -80,11 +80,11 @@ export function MakeLifeEasy2() {
           <div className="relative ">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
               <div className="lg:col-start-2">
-                <h3 className="text-left text-xl font-bold leading-snug tracking-tight text-zinc-800 dark:text-amber-200 sm:text-2xl">
+                <h3 className="text-xl font-bold leading-snug tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-2xl">
                   Travel and party in style, we will take you where you want to
                   go{' '}
                 </h3>
-                <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
+                <p className="mt-3 text-base leading-tight text-zinc-600 dark:text-zinc-100">
                   With high quality amenities, exceptional customer service, and
                   a commitment to safety, you can rest easier knowing your
                   transportation is completely taken care of.
@@ -94,14 +94,14 @@ export function MakeLifeEasy2() {
                   {communicationFeatures.map((item) => (
                     <div key={item.id} className="relative">
                       <dt>
-                        <div className="absolute flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
-                          <item.icon className="h-8 w-8" aria-hidden="true" />
+                        <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
+                          <item.icon className="w-8 h-8" aria-hidden="true" />
                         </div>
                         <p className="ml-16 text-lg font-bold leading-6 text-zinc-600 dark:text-amber-200">
                           {item.name}
                         </p>
                       </dt>
-                      <dd className="mt-2 ml-16 text-base font-normal text-zinc-600 dark:text-zinc-100">
+                      <dd className="mt-2 ml-16 text-base font-normal leading-tight text-zinc-600 dark:text-zinc-100">
                         {item.description}
                       </dd>
                     </div>
@@ -109,15 +109,15 @@ export function MakeLifeEasy2() {
                 </dl>
               </div>
 
-              <div className="relative -mx-4 mt-10 lg:col-start-1 lg:mt-0">
+              <div className="relative mt-10 -mx-4 lg:col-start-1 lg:mt-0">
                 <div className="py-16 lg:py-24">
-                  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="glow-sm relative overflow-hidden rounded-xl bg-blue-500 px-8 py-24 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
+                  <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div className="relative px-8 py-24 overflow-hidden bg-blue-500 glow-sm rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
                       <div className="absolute inset-0 opacity-90 mix-blend-multiply saturate-50 filter">
                         <Image
                           src={promImage}
                           alt=""
-                          className="h-full w-full object-cover"
+                          className="object-cover w-full h-full"
                           width="400"
                           height="600"
                         />
