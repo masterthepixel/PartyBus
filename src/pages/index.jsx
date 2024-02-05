@@ -7,6 +7,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { YourGoal } from '@/components/YourGoal'
+import { Leadership } from '@/components/Leadership'
 import { MakeLifeEasy } from '@/components/MakeLifeEasy'
 import { MakeLifeEasy2 } from '@/components/MakeLifeEasy2'
 import { Testimonial } from '@/components/Testimonial'
@@ -102,8 +103,8 @@ function Article({ article }) {
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    <Link className="p-1 -m-1 group" {...props}>
+      <Icon className="w-6 h-6 transition fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -112,16 +113,16 @@ function Newsletter() {
   return (
     <form
       action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="p-6 border rounded-2xl border-zinc-100 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
+        <MailIcon className="flex-none w-6 h-6" />
         <span className="ml-3">Stay up to date</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
-      <div className="mt-6 flex">
+      <div className="flex mt-6">
         <input
           type="email"
           placeholder="Email address"
@@ -129,7 +130,7 @@ function Newsletter() {
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10 sm:text-sm"
         />
-        <Button type="submit" className="ml-4 flex-none">
+        <Button type="submit" className="flex-none ml-4">
           Join
         </Button>
       </div>
@@ -142,7 +143,7 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+      <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
@@ -155,7 +156,7 @@ function Photos() {
               src={image}
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 object-cover w-full h-full"
             />
           </div>
         ))}
@@ -202,12 +203,12 @@ export default function Home({ articles, galleryCategories }) {
                 src={portraitImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="rotate-3 rounded-2xl object-cover backdrop-blur-sm dark:bg-zinc-800"
+                className="object-cover rotate-3 rounded-2xl backdrop-blur-sm dark:bg-zinc-800"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <Image src={avatarImage} alt="" className="w-64 object-cover " />
+            <Image src={avatarImage} alt="" className="object-cover w-64 " />
             <h1 className="-mt-16 bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 md:text-6xl lg:text-7xl">
               Create Lasting Memories
             </h1>
@@ -222,11 +223,13 @@ export default function Home({ articles, galleryCategories }) {
       </Container>
       <YourGoal />
       <TagClouds data={categoriesToRender} />
+      <Photos />
+
+      <Leadership />
+
       <MakeLifeEasy />
       <MakeLifeEasy2 />
-      <WeBrandLeaders />
       <Testimonial />
-      <Photos />
       {/* 
       <Container className="mt-24 md:mt-28">
         <div className="grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2">

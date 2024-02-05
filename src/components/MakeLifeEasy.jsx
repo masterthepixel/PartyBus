@@ -72,7 +72,7 @@ export function MakeLifeEasy() {
             src={harborwheelImage}
             alt=""
             sizes=""
-            className="w-82 absolute inset-y-0 right-0 hidden lg:block"
+            className="absolute inset-y-0 right-0 hidden w-82 lg:block"
           />
           {/* 
           <svg
@@ -111,35 +111,28 @@ export function MakeLifeEasy() {
           */}
 
           <div className="relative">
-            <h2 className=" ...  mx-auto max-w-2xl bg-gradient-to-b from-sky-600 to-blue-500 bg-clip-text py-8 font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 lg:py-16 lg:text-center lg:text-6xl">
-              About Pro-Bus
+            <h2 className=" ...  mx-auto max-w-5xl bg-gradient-to-b from-sky-600 to-blue-500 bg-clip-text py-8 font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 lg:py-16 md:text-center lg:text-6xl lg:mt-16 lg:text-left">
+              Pro-Bus Mission &amp; Goals
             </h2>
           </div>
 
           <div className="relative lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative">
-              <h3 className="text-left text-xl font-bold leading-snug tracking-tight text-zinc-800 dark:text-amber-200 sm:text-2xl">
+              <h3 className="text-xl font-bold leading-snug tracking-tight text-left text-zinc-800 dark:text-amber-200 sm:text-2xl">
                 For the best luxury transportation provider in the DMV,
                 you&rsquo;ve come to the right place.
               </h3>
               <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">
-                Our party bus offers the most convenient and stylish way of
-                transportation. Don&rsquo;t let bad traffic, fighting for
-                parking spaces, or the quest of finding someone to be your
-                designated driver ruin your day or night out. With a one of
-                luxury vehicles you and your guests are guaranteed to enjoy all
-                that the city has to offer in the most luxurious way possible.
-                Let our team show you around the hottest spots in the area - no
-                matter the event, itinerary or schedule, we&rsquo;re able to
-                accommodate it.
-              </p>
+              The DMV is a town with so many amazing activities and destinations. The one constant issue is traffic and parking.  It&rsquo;s taken some time for us to come up with a viable solution.  The bus pass concept. We wanted to offer an answer to a problem everyone had. We know you&rsquo;ve experienced riding  around, circling blocks  over and over looking for a parking space.  It takes the fun out of the night.  So imagine being able to show up with all your friends together and not have to worry about parking.  The ProBUS was created to combat these issues; as time went on we realized we really had a niche in the market place for this type of mobile party.               </p>
+              <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-100">We noticed our guest had more fun on the bus than some of the events we’ve been booked to take them to. We decided to throw our own themed events, such as karaoke and ladies night as well as our very  own block party. 
+</p>
 
               <dl className="mt-10 space-y-10">
                 {transferFeatures.map((item) => (
                   <div key={item.id} className="relative">
                     <dt>
-                      <div className="absolute flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
-                        <item.icon className="h-8 w-8 " aria-hidden="true" />
+                      <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-xl bg-gradient-to-r from-purple-400 to-pink-600">
+                        <item.icon className="w-8 h-8 " aria-hidden="true" />
                       </div>
                       <p className="ml-16 text-lg font-bold leading-6 text-zinc-600 dark:text-amber-200">
                         {item.name}
@@ -153,9 +146,9 @@ export function MakeLifeEasy() {
               </dl>
             </div>
 
-            <div className="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
+            <div className="relative mt-10 -mx-4 lg:mt-0" aria-hidden="true">
               <svg
-                className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
+                className="absolute transform -translate-x-1/2 translate-y-16 left-1/2 lg:hidden"
                 width={784}
                 height={404}
                 fill="none"
@@ -187,13 +180,13 @@ export function MakeLifeEasy() {
                 />
               </svg>
               <div className="py-16 lg:py-24">
-                <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                  <div className="glow-sm relative overflow-hidden rounded-xl bg-blue-500 px-8 py-24 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
-                    <div className="saturate-90 absolute inset-0 opacity-95 mix-blend-multiply filter">
+                <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                  <div className="relative px-8 py-24 overflow-hidden bg-blue-500 glow-sm rounded-xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-16">
+                    <div className="absolute inset-0 saturate-90 opacity-95 mix-blend-multiply filter">
                       <Image
                         src={businteriorImage}
                         alt=""
-                        className="h-full w-full object-cover"
+                        className="object-cover w-full h-full"
                       />
                     </div>
                     <div className="relative lg:col-span-2">
@@ -224,7 +217,7 @@ export function MakeLifeEasy() {
             </div>
           </div>
           <svg
-            className="absolute right-full hidden translate-x-1/2 translate-y-12 transform lg:block"
+            className="absolute hidden transform translate-x-1/2 translate-y-12 right-full lg:block"
             width={404}
             height={784}
             fill="none"

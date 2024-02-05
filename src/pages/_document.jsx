@@ -52,7 +52,7 @@ export default function Document() {
         />
       </Head>
       <body
-        className="flex flex-col h-full bg-sky-500 dark:bg-zinc-900"
+        className="flex flex-col h-full bg-zinc-50 dark:bg-zinc-900"
         id="backtobody"
       >
         <Main />
