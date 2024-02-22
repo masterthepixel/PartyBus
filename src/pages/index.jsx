@@ -148,13 +148,13 @@ function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
   return (
-    <div className="mt-16 sm:mt-20">
+    <div className="relative z-10 -mt-16 sm:-mt-20">
       <div className="flex justify-center gap-5 py-4 -my-4 overflow-hidden sm:gap-8">
         {[image6, image8, image9, image10, image7].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-900 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl shadow-md ',
               rotations[imageIndex % rotations.length]
             )}
           >
@@ -208,7 +208,7 @@ export default function Home({ articles, galleryCategories }) {
         <title></title>
         <meta name="description" content="Create lasting memories" />
       </Head>
-      <Container className="relative z-10 ">
+      <Container className="relative z-10 -mt-24 ">
         <div className="absolute left-0 -z-[1] h-full max-h-[850px] w-full bg-black opacity-[0.55]">
           overlay
         </div>
@@ -231,38 +231,36 @@ export default function Home({ articles, galleryCategories }) {
           </video>
 
           <div className=" lg:pl-24">
-            <div className=" m-auto max-w-md px-2.5 md:max-w-lg lg:m-0 lg:max-w-none ">
+            <div className=" m-auto max-w-md px-1.5 md:max-w-lg lg:m-0 lg:max-w-none backdrop-blur-sm ">
               <Image
-                src={portraitImage}
+                src={avatarImage}
                 alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="object-cover rotate-3 rounded-2xl backdrop-blur-sm dark:bg-zinc-800"
+                className="object-cover rotate-3 rounded-2xl  dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-gray-700 dark:via-gray-900 dark:to-black"
               />
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <Image src={avatarImage} alt="" className="object-cover w-64 " />
-            <h1 className="-mt-16 bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 md:text-6xl lg:text-7xl">
+            <h1 className="bg-gradient-to-b from-gray-50 to-zinc-50 bg-clip-text font-body text-5xl font-[600] tracking-tighter text-transparent drop-shadow-lg filter dark:text-amber-300 md:text-6xl lg:text-7xl mt-24">
               Create Lasting Memories
             </h1>
             <div className="mt-2 space-y-7 text-zinc-50 dark:text-zinc-100 lg:mt-6 lg:text-xl">
-              <p className="text-base text-white md:text-lg lg:text-xl">
-                Transportation that doubles as entertainment, whether it &apos;s
+              <p className="text-base leading-tight tracking-tight text-white md:text-lg lg:text-xl">
+                Transportation that doubles as entertainment, whether it is
                 tonight or for an event far in advance, book with us today.
               </p>
             </div>
           </div>
         </div>
       </Container>
-      <YourGoal />
-      <TagClouds data={categoriesToRender} />
       <Photos />
-
+      <YourGoal />
+      <WeBrandLeaders />
       <Leadership />
-
       <MakeLifeEasy />
       <MakeLifeEasy2 />
       <Photos2 />
+      <TagClouds data={categoriesToRender} />
       <Testimonial />
 
       {/* 

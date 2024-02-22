@@ -47,7 +47,56 @@ const faqs = [
     answer:
       "Children can most definitely come onto our vehicles. The only thing is, if there are those who are under 21 years of age, there cannot be alcohol on the vehicles.",
   },
-  // More questions...
+  {
+    "id": 8,
+    "question": "What forms of payments are accepted?",
+    "answer": "Quickbook: Apple Pay, Visa, MasterCard"
+  },
+  {
+    "id": 9,
+    "question": "Are clients allotted time to decorate prior to events?",
+    "answer": "If requested, clients are allotted 30 minutes prior to the start of their event to decorate. Absolutely no confetti or balloons. Painters tape only. The client will also be given 30 minutes after the event to remove all decorations from the party bus. There will be a $150 hold fee for clients who wish to decorate. If all decorations are removed and there is no damage to the party bus, you will receive the $150 back. On the other hand, if the policy is not followed and there are damages to the bus as a result of decorations, the $150 will be kept by Probus."
+  },
+  {
+    "id": 10,
+    "question": "Is there a charge for going over the time the party bus was initially booked for?",
+    "answer": "$200 per hour"
+  },
+  {
+    "id": 11,
+    "question": "Is there a cleaning fee?",
+    "answer": "$150. The cleaning fee will apply if the party bus is left in a disheveled state, new damages occur, anything is broken, or if the smoking policy is violated."
+  },
+  {
+    "id": 12,
+    "question": "Is there a deposit? When is the balance paid?",
+    "answer": "$500 to reserve your date and time. The reservation is not locked in until the deposit is paid. The remaining balance will be paid through QuickBooks the day of. If the client misses their reservation, the deposit will not be refunded. The client may reschedule."
+  },
+  {
+    "id": 13,
+    "question": "How far in advance must an event be booked?",
+    "answer": "72 hours"
+  },
+  {
+    "id": 14,
+    "question": "How many people can fit on the bus?",
+    "answer": "20-25 people"
+  },
+  {
+    "id": 16,
+    "question": "Is smoking allowed?",
+    "answer": "420 friendly, vapes. Absolutely no cigarettes/cigars/black & milds/capones etc."
+  },
+  {
+    "id": 17,
+    "question": "Can we change the itinerary last minute?",
+    "answer": "For the safety of our clients and staff, the route is mapped out prior to the event. We ask that the initial itinerary that is presented upon booking is adhered to as closely as possible."
+  },
+  {
+    "id": 18,
+    "question": "Does the booking come with anything?",
+    "answer": "Water, bag of ice, cups, and paper towels."
+  },
 ]
 
     export function WeBrandLeaders() {
