@@ -245,7 +245,7 @@ export default function Home({ articles, galleryCategories }) {
               Create Lasting Memories
             </h1>
             <div className="mt-2 space-y-7 text-zinc-50 dark:text-zinc-100 lg:mt-6 lg:text-xl">
-              <p className="text-base leading-tight tracking-tight text-white md:text-lg lg:text-xl">
+              <p className="hidden text-base leading-tight tracking-tight text-white md:block md:text-lg lg:text-xl">
                 Transportation that doubles as entertainment, whether it is
                 tonight or for an event far in advance, book with us today.
               </p>
@@ -257,11 +257,8 @@ export default function Home({ articles, galleryCategories }) {
       <YourGoal />
       <WeBrandLeaders />
       <Leadership />
-      <MakeLifeEasy />
       <MakeLifeEasy2 />
       <Photos2 />
-      <TagClouds data={categoriesToRender} />
-      <Testimonial />
 
       {/* 
       <Container className="mt-24 md:mt-28">

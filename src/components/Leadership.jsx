@@ -51,7 +51,7 @@ export function Leadership() {
                   height="595"
                   width="300"
                 />
-                <div className="flex-auto md:w-1/2">
+                <div className="flex-auto md:w-full">
                   <h3 className="text-lg font-semibold leading-8 tracking-tight text-zinc-600 dark:text-zinc-50">
                     {person.name}
                   </h3>
